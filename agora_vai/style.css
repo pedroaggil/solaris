@@ -1,0 +1,83 @@
+body { background-color: #BDCAF0; font-family: sans-serif;} /* Cor de fundo roxinha e tipografia */
+
+/* Barra de rolagem */
+body::-webkit-scrollbar { width: 12px; } /* Largura */
+
+	body::-webkit-scrollbar-track {	background: #6495ED; } /* Cor de destaque de fundo */
+
+	body::-webkit-scrollbar-thumb { /* Cor da barra em si */
+	background-color: #BDCAF0;
+	border-radius: 10px;
+	border: 2px solid #4169E1;
+	}
+
+.box { /* Caixa branca de fundo */
+	width: 35vw; height: auto;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.3);
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 { /* Título gradiente de azul para um azul mais claro */
+	background:  linear-gradient(to right, #191970 25%, #4169E1 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color:  transparent;
+}
+
+span { color: #191970; font: bold 12pt sans-serif; }
+
+hr { width: 30vw; background-color: #6495ED; } /* Linhas divisórias */
+
+/* .add { vertical-align: sub; } */
+
+div.produto {
+	display: inline;
+	vertical-align: text-bottom;
+	width: 25vw;
+}
+
+input[type=text] { width: 12vw; }
+input[type=number] { width: 7vw; }
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=email] {
+	margin-bottom: 0.55vh;
+	margin-left: 0.5vh;
+	height: 4vh;
+	border-radius: 7px;
+}
+
+input[type=submit],
+input[type=reset] {
+	width: 11.75vw; height: 5vh;
+	border-radius: 7px;
+	background-color: rgba(65, 105, 225, 0.3);
+}
+
+a, a:link, a:visited { 
+    text-decoration: none;
+    color: #4169E1;
+}
+
+a:hover, {
+    color: #E07358;
+}
+
+#insert {
+	display: flex;
+	justify-content: center;
+
+	color: #4169E1;
+}
+
+footer { /* Rodapé ao fim da página */
+	padding: 5px;
+	text-align: center;
+    color: #322D36;
+    font: italic 12pt sans-serif;
+}
