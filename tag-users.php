@@ -21,6 +21,7 @@
 	<div class="box">
 		<?php include('connect.php');
 
+			$_SESSION['user'] = $_GET['user'];
 			$search = "SELECT * FROM tb_user WHERE cd_user = " . $_GET['user'];
 			$result = $mysqli->query($search);
 
