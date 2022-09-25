@@ -7,7 +7,7 @@
 	$inserir = "INSERT INTO tb_user (ds_email, ds_username, nr_nivel, ds_senha) VALUES ('". $email ."', '". $name ."', 1, '". $password ."')";
 
 	if ($lista = $mysqli->query($inserir)) {
-		?> <script>	window.location.href = "consult.php"; </script> <?php 
+		?> <script>	window.location.href = "../consult.php"; </script> <?php 
 
 	} else {
 		echo $mysqli->error;

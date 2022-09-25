@@ -1,4 +1,5 @@
 <?php session_start(); /* Conexão entre servidor e banco de dados */
+
 	$mysqli = new mysqli("localhost", "root", "usbw", "db_solaris");
 	$mysqli->set_charset("utf-8");
 

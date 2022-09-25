@@ -24,13 +24,13 @@
 	<div class="box">
 		<?php include('php/connect.php');
 
-			$_SESSION['user'] = $_GET['user']; // tag-include.php
+			$_SESSION['user'] = $_GET['user'];
 			$search = "SELECT * FROM tb_user WHERE cd_user = " . $_GET['user'];
 			$result = $mysqli->query($search);
 
 			while ($row = $result -> fetch_object()) {
 				echo "<br>
-					<form action='php/tag-include.php' method='post'>
+					<form action='tag-include.php' method='post'>
 						<input type='text' readonly name='username' value='$row->ds_username'>
 						<input type='email' readonly name='mail' value='$row->ds_email'><br>
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login</title>
+	<title>Homepage</title>
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -15,11 +15,11 @@
 	<!-- jQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-	<h1 style="text-align: center">Login</h1>
+	<h1 style="text-align: center">Inserir</h1>
 
 	<div class="box">
 		<br>
@@ -31,15 +31,16 @@
 			if($lista = $mysqli->query($sql)) {
 				?>
 
-				<form method="post" action="php/login.php">
-					<input type="email" required name="mail" style="width: 20vw;" placeholder="E-mail"><br>
-					<input type="password" min="0" max="16" required name="password" style="width: 20vw;" placeholder="Senha">
+				<form method="post" action="php/new-user.php">
+					<input id="mail" type="email" required name="email" value="" style="width: 20vw;" placeholder="E-mail"><br>
+					<input id="name" type="text" required name="username" value="" style="width: 20vw;" placeholder="Nome de usuário"><br>
+					<input id="pass" type="password" min="0" max="16" required name="password" value="" style="width: 20vw;" placeholder="Senha">
 					<br><br>
 
-					<input type="submit" value="Login"><br>
+					<input id="submit" type="submit" value="Cadastrar usuário"><br>
 				</form>
 
-				<br><a href="insert-user.php">Ainda não tem uma conta? Registre-se</a><br>
+				<br><a href="index.php">Já tem uma conta? Entre</a><br>
 
 				<?php
 			}
@@ -51,6 +52,6 @@
     <footer>
  		<p>&copy; 2022 &middot; Solaris &middot; PDTCC</p>
  	</footer>
-
+ 	
 </body>
 </html>
