@@ -15,7 +15,7 @@
 	<!-- jQuery -->
 	<script src="js/jquery-3.6.1.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
