@@ -27,7 +27,7 @@ main {
 
 .box{
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 1200px;
     height: 700px;
     background-color: #fff;
@@ -35,24 +35,46 @@ main {
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
+h3{
+font-size: 30px;
+font-weight: 600;
+margin-top: 5rem;
+margin-bottom: 5rem;
+color: #151111;
+text-align:center;
+}
+
 .container{
-    margin-bottom: 200px;
-    margin: 0 190px;
     text-align: center;
+    margin-left: 110px;
 }
 .row{
     text-align: center;
-    margin: 30px;
+    margin: 2rem 0 0 0;
 } 
    
 
-.col-3{
-    margin: 20px;
-    padding: 0px 20px;
-    background-color: aquamarine; 
+.col-1{  
     border-color: #fff ;
-    border: 10px;
+   margin-left: 10px;
 }
+
+.col-6{  
+    padding: 0 0 0  200px;
+    border-color: #fff ;
+    border: 200px;
+}
+.arrumar{
+    margin: 0px 0 50px 0 ;
+}
+
+.arrumar2{
+    margin-left: 50px;
+}
+span{
+margin: 0px 20px;
+}
+
 
 .logo img {
     width: 70px;
@@ -70,11 +92,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    min-width: 175px;
-    height: 65px;
+    padding: 0 30px;
+    width: 50px;
+    height: 35px;
     background-color: #F2955E;
-    border-radius: 25px;
+    border-radius: 20px;
     border-style: none;
     font-size: 18px;
     color: #fff;
@@ -88,11 +110,6 @@ button {
  button:hover {
   background-color: darkgrey;
 
-}
-
-header {
-  background-color: #FFF;
-  
 }
 
 header .nav-item{
@@ -134,7 +151,12 @@ header .nav-link:hover {
 }
 
 a {
+    font-size: small;
     text-decoration: none;
 }
 
-.negrito { color: #000; font-weight: bold; }
+.negrito {
+     color: #000;
+     font-weight: bold;
+     font-size: 20px;
+     }

@@ -11,9 +11,7 @@
     WHERE cd_user = ".$_SESSION['user'].";";
 
     if ($result = $mysqli->query($update)) {
-    	?>
-    		<script> window.location.href = '../consult.php'; </script>
-    	<?php
+    	header('Location: ../admin/users.php');
 
     } else {
     	echo $mysqli->error;

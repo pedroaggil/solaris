@@ -1,5 +1,5 @@
 <?php
-include_once("conexao.php");
+include_once("connect.php");
 $_SESSION['tel'] = $_POST['tel'];
 $_SESSION['cidade'] = $_POST['cidade'];
 $_SESSION['bairro'] = $_POST['bairro'];

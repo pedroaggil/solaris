@@ -84,5 +84,5 @@ CREATE TABLE tb_tipocolab(
 );
 
 INSERT INTO tb_user (ds_email, ds_username, nr_nivel, ds_senha) VALUES
-	('pedroaggil@gmail.com', 'pedro_ggil', 2, 'euvimbarganhar'),
-	('ianzito@gmail.com', 'calvo', 1, 'dormammu');
+	('pedroaggil@gmail.com', 'pedro_ggil', 2, '1d1dbb098fcd26c4d3935e603a978d14acc58a57'), -- Senha: 'euvimbarganhar'
+	('ianzito@gmail.com', 'calvo', 1, '4f0b0dc38c21db0c503f5cba30c7ed12929b5a59'); -- Senha: 'dormammu'

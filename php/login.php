@@ -7,7 +7,7 @@
 
 	    $sql = "SELECT * 
 	    		FROM 'tb_user' 
-	    		WHERE ('ds_email' = '".$mail ."') AND ('ds_senha' = '". $password ."') 
+	    		WHERE 'ds_email' = '".$mail ."' AND 'ds_senha' = '". $password ."' 
 				LIMIT 1";
 
 	    if ($res = $mysqli->query($sql)) {
@@ -20,12 +20,13 @@
 					$_SESSION['username'] = $linha->ds_username;
 					$_SESSION['mail'] = $linha->ds_email;
 					$_SESSION['level'] = $linha->nr_nivel;
+					$lvl = $_SESSION['level'];
 	    
-	              if ($_SESSION['level'] == 1) {
-					?> <script> window.location.href = "../home-log.html"; </script> <?php
+	                if ($lvl == 1) {
+					header('Location: ../home-log.html');
 
-	                } elseif ($_SESSION['level'] == 2) {
-	                	echo $_SESSION['mail'];
+	            	} elseif ($lvl == 2) {
+	                	header('Location: ../admin/index.html');
 
 	                } else {
 	                	echo $_SESSION['mail'];

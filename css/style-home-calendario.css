@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 @media (min-width: 40em) {
-
 body, html{
   margin: 0;
   width:100%;
@@ -50,49 +49,25 @@ header .nav-link:hover {
 
 }
 
-.form {
-  padding: 0.25rem 20rem 4rem 20rem;
-
-}
-
-.form-control {
-  max-width: 450px;
-  margin: 0rem 0rem 0.25rem 0rem;
-
-}
-
-.text {
-  margin-bottom: 1.5rem;
-
-}
-
-label {
-  padding: 0.25rem 0rem 0.25rem 0rem;
-
-}
-
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 15px;
-  height: 40px;
-  width: 125px;
-  padding: 0.25rem 0.25rem 0.25rem 0.25rem; 
-  border: 0.02rem solid darkgrey;
-  font-size: 16px;
-  margin: 0rem 0rem 1rem 0rem;
-
-}
-
-option {
-  text-align: center;
-
-}
-
 .title {
   margin: 4rem 20rem 4rem 20rem;
 
+}
+
+.pub {
+ margin: 4rem 20rem 4rem 20rem;
+
+}
+
+.pub h4{
+  margin-bottom: 2rem;
+  font-weight: 600;
+
+}
+
+.pub h5 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .title p {
@@ -101,8 +76,15 @@ option {
 
 }
 
+i {
+  padding: 1rem;
+
+}
+
+
 button {
   padding: 0 20px;
+  margin-left: 15rem;
   min-width: 20px;
   height: 40px;
   background-color: #F2955E;
@@ -119,12 +101,4 @@ button {
   background-color: darkgrey;
 
 }
-input[type=number]::-webkit-inner-spin-button { 
-  -webkit-appearance: none;
-    
-}
-input[type=number] { 
-  -moz-appearance: textfield;
-  appearance: textfield;
 
-}

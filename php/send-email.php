@@ -1,5 +1,7 @@
 <?php 
 
+if (isset($_POST['submit'])) {
+
 	// Data
 	$name = $_POST['name'];
 	$subject = $_POST['ass'];
@@ -15,18 +17,18 @@
 	           	<tr>
 	             		<td>
 	  					<tr>
-	                			<td width='500'>Nome: $name</td>
+	                			<td width='500'>Nome: ". $name ."</td>
 	               		</tr>
 	               		<tr>
-	                 			<td width='320'>E-mail: <b>$userMail</b></td>
+	                 			<td width='320'>E-mail: <b>". $userMail ."</b></td>
 	     				</tr>
 	               		<tr>
-	                 			<td width='320'>Mensagem: $msg</td>
+	                 			<td width='320'>Mensagem: ". $msg ."</td>
 	               		</tr>
 	           		</td>
 	         		</tr>
 	         		<tr>
-	           		<td>Este e-mail foi enviado em <b>$date</b> às <b>$hour</b></td>
+	           		<td>Este e-mail foi enviado em <b>". $date ."</b> às <b>". $hour ."</b></td>
 	         		</tr>
         	</table>
 		</html>
@@ -34,25 +36,44 @@
 
 	// Send mail
 
-		// Mail infos
-		$addr = "pedroaggil@gmail.com";
-		$subj = $_POST['ass'];
+		// PHPMailer
+		require_once('../src/PHPMailer.php');
+		require_once('../src/SMTP.php');
+		require_once('../src/Exception.php');
 
-		// Format
-		$headers  = 'MIME-Version: 1.0' . "\r\n";
-	    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	    $headers .= 'From: $name <$userMail>';
+		use PHPMailer\PHPMailer\PHPMailer;
+		use PHPMailer\PHPMailer\SMPTP;
+		use PHPMailer\PHPMailer\Exception;
 
-	$sendmail = mail($addr, $subj, $body, $headers);
+		$mail = new PHPMailer(true);
 
-	if ($sendmail) {
-		$mgm = "E-mail enviado.";
-		echo " <meta http-equiv='refresh' content='10;URL=../email.php'>";
+		try {
+			$mail->isSMTP();
+			$mail->Host       = 'smptp.gmail.com';
+			$mail->SMPTPAuth  = true;
+			$mail->Username   = 'pedroaggil@gmail.com';
+			$mail->Password   = 'euvimbarganhar';
+			$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+			$mail->Port       = 465;
+			/*	Caso use a SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS, use a Port = 587	*/
 
-	} else {
-		$mgm = "Falha ao enviar e-mail.";
-		echo "";
+			$mail->setFrom('pedroaggil@gmail.com', 'Usuário'); // Igual a Username
+			$mail->addAddress('pedroaggil@gmail.com', 'Pedro Gil'); // Destinatário
+			// Pode-se adicionar outros destinatários, um por linha
 
-	}
+			$mail->isHTML(true);
+			$mail->Subject    = $subject;
+			$mail->Body       = $body;
+			$mail->AltBody    = 'Olha o e-mail chegando!';
+
+			if ($mail->send()) { echo 'deu tudo certo'; }
+			else { echo 'nada dá certo nessa caralha'; }
+
+		} catch (Exception $e) {
+			echo 'Não deu muito certo não amigo, veja: {$mail->ErrorInfo}';
+
+		}
+
+}
 
 ?>
