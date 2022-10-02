@@ -1,3 +1,6 @@
+<?php include 'php/connect.php';
+  if (isset($_SESSION['id'])) {
+?>
 
 <!DOCTYPE html>
 <html>
@@ -258,3 +261,7 @@
 
 </body>
 </html>
+
+<?php
+  } else { header('Location: home-nolog.html'); }
+?>
