@@ -7,7 +7,7 @@
 
 	    $sql = "SELECT * 
 	    		FROM 'tb_user' 
-	    		WHERE 'ds_email' = '".$mail ."' AND 'ds_senha' = '". $password ."' 
+	    		WHERE 'ds_email' = '". $mail ."' AND 'ds_senha' = '". $password ."' 
 				LIMIT 1";
 
 	    if ($res = $mysqli->query($sql)) {
@@ -22,14 +22,14 @@
 					$_SESSION['level'] = $linha->nr_nivel;
 					$lvl = $_SESSION['level'];
 	    
-	                if ($lvl == 1) {
-					header('Location: ../home-log.html');
+	                if ($_SESSION['level'] == 1) {
+						header('Location: ../home-log.php');
 
-	            	} elseif ($lvl == 2) {
+	            	} elseif ($_SESSION['level'] == 2) {
 	                	header('Location: ../admin/index.html');
 
 	                } else {
-	                	echo $_SESSION['mail'];
+						header('Location: ../login/index.html');
 
 	                }
 	            }
