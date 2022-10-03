@@ -25,7 +25,7 @@
 	                if ($_SESSION['level'] == 1) {
 						header('Location: ../home-log.php');
 
-	            	} elseif ($_SESSION['level'] == 2) {
+	            	} else if ($_SESSION['level'] == 2) {
 	                	header('Location: ../admin/index.html');
 
 	                } else {
