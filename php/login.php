@@ -6,9 +6,8 @@
 	    $password = SHA1($_POST['password']);
 
 	    $sql = "SELECT * 
-	    		FROM 'tb_user' 
-	    		WHERE 'ds_email' = '". $mail ."' AND 'ds_senha' = '". $password ."' 
-				LIMIT 1";
+	    		FROM tb_user 
+	    		WHERE ds_email = '". $mail ."' AND ds_senha = '". $password ."'";
 
 	    if ($res = $mysqli->query($sql)) {
 
