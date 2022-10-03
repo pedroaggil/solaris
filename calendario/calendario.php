@@ -25,14 +25,14 @@
 
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-      <a class="navbar-brand" href="../home-log.html">
+      <a class="navbar-brand" href="../home-log.php">
         <img src="../img/logo.png"/>
       </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="../index.html" class="nav-link">Ínicio</a></li>
-          <li class="nav-item"><a href="../index.html #sobre" class="nav-link">Sobre nós</a></li>
-          <li class="nav-item"><a href="../index.html #colaboradores" class="nav-link">Colaboradores</a></li>
+          <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
+          <li class="nav-item"><a href="../home-log.php #sobre" class="nav-link">Sobre nós</a></li>
+          <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
           <li class="nav-item"><a href="index.html" class="nav-link">Agenda</a></li>
@@ -133,8 +133,8 @@
 		</div>
 
 		<div class="footer">
-			<button type="reset" value="Reset"><a href="#" class="text-decoration-none text-white">Limpar</a></button>
-			<button type="submit"><a href="#" class="text-decoration-none text-white">Prosseguir</a></button>
+			<button type="reset" value="Reset">Limpar</button>
+			<button type="submit">Prosseguir</button>
 		</div>
 		</div>	
 	</form>
@@ -147,7 +147,7 @@
 </body>
 </html>
 <?php
-	} else {
+	}else{
 		header("Location: ../login/index.html");	
 	}
 

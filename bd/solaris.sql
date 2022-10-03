@@ -12,14 +12,15 @@ CREATE TABLE tb_user(
 
 CREATE TABLE tb_agenda(
 	cd_agenda INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	ds_email VARCHAR(100) NOT NULL,
+	nr_telefone VARCHAR(15) NOT NULL,
 	nm_evento VARCHAR(45),
 	hr_hora TIME,
 	dt_data DATE,
 	ds_logradouro VARCHAR(80),
-	nr_numero INT,
 	ds_bairro VARCHAR(45),
 	ds_cidade VARCHAR(45),
-	nr_tipo INT NOT NULL,
+	nr_tipo INT,
 	st_publica BIT,
 	id_salvar INT
 );

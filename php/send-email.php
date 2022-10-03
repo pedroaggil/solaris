@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
 			$mail->Host       = 'smptp.gmail.com';
 			$mail->SMPTPAuth  = true;
 			$mail->Username   = 'pedroaggil@gmail.com';
-			$mail->Password   = '*******';
+			$mail->Password   = 'euvimbarganhar';
 			$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 			$mail->Port       = 465;
 			/*	Caso use a SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS, use a Port = 587	*/

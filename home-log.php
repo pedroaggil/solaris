@@ -25,17 +25,17 @@
 
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-      <a class="navbar-brand" href="home-log.html">
+      <a class="navbar-brand" href="home-log.php">
         <img src="img/logo.png"/>
       </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="home-log.html" class="nav-link">Ínicio</a></li>
+          <li class="nav-item"><a href="home-log.php" class="nav-link">Ínicio</a></li>
           <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
           <li class="nav-item"><a href="#colaboradores" class="nav-link">Colaboradores</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
-          <li class="nav-item"><a href="calendário/index.html" class="nav-link">Agenda</a></li>
+          <li class="nav-item"><a href="calendario/index.html" class="nav-link">Agenda</a></li>
         </ul>
 
 
@@ -61,7 +61,7 @@
       <div class="carousel-item active">
         <div class="container">
           <div class="carousel-img"> 
-            <a href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><img src="img/banner3.jpg"></a>
+            <a href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><!-- <img src="img/banner3.jpg"></a> -->
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
       <div class="carousel-item">
         <div class="container">
           <div class="carousel-img">
-            <img src="img/banner2.jpg">
+            <!-- <img src="img/banner2.jpg"> -->
           </div>
         </div>
       </div>
@@ -77,7 +77,7 @@
       <div class="carousel-item">
         <div class="container">
           <div class="carousel-img">
-            <img src="img/banner.jpg">
+           <!--  <img src="img/banner.jpg"> -->
           </div>
         </div>
       </div>
