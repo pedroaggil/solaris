@@ -147,7 +147,7 @@
 </body>
 </html>
 <?php
-	}else{
+	} else {
 		header("Location: ../login/index.html");	
 	}
 
