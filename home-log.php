@@ -61,7 +61,7 @@
       <div class="carousel-item active">
         <div class="container">
           <div class="carousel-img"> 
-            <a href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><!-- <img src="img/banner3.jpg"></a> -->
+            <a href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><img src="img/banner3.jpg"></a>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
       <div class="carousel-item">
         <div class="container">
           <div class="carousel-img">
-            <!-- <img src="img/banner2.jpg"> -->
+            <img src="img/banner2.jpg">
           </div>
         </div>
       </div>
@@ -77,7 +77,7 @@
       <div class="carousel-item">
         <div class="container">
           <div class="carousel-img">
-           <!--  <img src="img/banner.jpg"> -->
+           <img src="img/banner.jpg">
           </div>
         </div>
       </div>
@@ -95,28 +95,29 @@
   <!-- carrossel -->
 
 
-  <!-- icons -->
+   <!-- icons -->
   <div class="container marketing">
-
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="img/c.png">
 
-        <h2 class="fw-normal">Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <h2 class="fw-bold">Carcinoma</h2>
+        <p>O carcinoma basocelular é o mais comum. Tem início nas células basais e cracteriza-se por um nódulo de cera branco ou mancha marrom escamosa.</p>
       </div>
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="img/g.png">
 
-        <h2 class="fw-normal">Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <h2 class="fw-bold">Garcinoma </h2>
+        <p>O garcinoma espinocelular é o 2° mais comum. Ocorre devido a presença de células escamosas na epiderme (parte superficial da pele).</p>
       </div>
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
+        <img src="img/m.png">
+
+        <h2 class="fw-bold">Melanoma</h2>
+        <p>O melanoma é o mais raro. Tem origem nas células produtoras da melanina e pode aparecer em qualquer área do corpo</p>
       </div>
     </div>
+   <!--  icons -->
     <hr class="divider">
 
     <div class="espaço1"></div>
@@ -132,7 +133,7 @@
           </p>
         </div>
         <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          <img src="img/.jpg" width="100%" height="100%">
         </div>
       </div>
     <!-- nos conheça -->
@@ -207,7 +208,10 @@
 
   <!-- colaboradores -->
   <div class="colab" id="colaboradores">
-    
+    <!-- <h2 class="fw-bold text-center" style="font-size: 40px;">Conheça nossos colaboradores</h2>
+
+    <div class="colabtn"><button name="submit" class="form-btn" type="submit">Quero me tornar um colaborador</button></div> -->
+
   </div>
   <!-- colaboradores -->
 
@@ -215,8 +219,11 @@
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
-        <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        <h1 class="display-4 fw-bold lh-1 mb-3" style="font-size: 58px;">Vamos conversar!</h1>
+        <h1 class="display-4 fw-bold lh-1 mb-3" style="font-size: 50px;">Entre em contato conosco</h1>
+        <p class="col-lg-10 fs-4">Tem alguma dúvida ou deseja participar do projeto? Nos mande uma mensagem através do formulário ao lado ou acesse nossas redes!</p>
+        <a class="text-muted" href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><img src="img/insta.png" style="width: 50px; height: 50px; margin:1rem 1rem 0 0;"></a>
+        <a class="text-muted" href="#"><img src="img/git.png" style="width: 50px; height: 50px; margin-top: 1rem;"></a>
       </div>
       <div class="col-md-10 mx-auto col-lg-5">
         <form class="p-4 p-md-5 border rounded-3 bg-light">

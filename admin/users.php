@@ -22,17 +22,17 @@
 
               <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-              <a class="navbar-brand" href="../home-log.html">
+              <a class="navbar-brand" href="index.html">
                 <img src="../img/logo.png"/>
               </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li class="nav-item"><a href="../home-log.html" class="nav-link">Ínicio</a></li>
-                  <li class="nav-item"><a href="../home-log.html#sobre " class="nav-link">Sobre nós</a></li>
-                  <li class="nav-item"><a href="../home-log.html#colaboradores" class="nav-link">Colaboradores</a></li>
+                  <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
+                  <li class="nav-item"><a href="../home-log.php#sobre " class="nav-link">Sobre nós</a></li>
+                  <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
-                  <li class="nav-item"><a href="../calendário/index.html" class="nav-link">Agenda</a></li>
+                  <li class="nav-item"><a href="../calendario/index.html" class="nav-link">Agenda</a></li>
                 </ul>
 
 
@@ -95,5 +95,9 @@
 </div>
 </main>
 <br>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
 </body>
 </html>

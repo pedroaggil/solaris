@@ -1,6 +1,6 @@
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-  @media (min-width: 40em) {
+  @media (min-width: 1em) {
 
 .carousel-caption p {
     margin-bottom: 1.25rem;
@@ -15,7 +15,7 @@
   }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 1em) {
   .featurette-heading {
     margin-top: 3rem;
 
@@ -114,7 +114,7 @@ header .nav-link:hover {
 
 .carousel {
   margin-bottom: 4rem;
-  background-color: darkgrey;
+  /*background-color: darkgrey;*/
 
 }
 
@@ -135,7 +135,7 @@ a .logo {
 }
 
 .marketing .col-lg-4 {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
 
@@ -174,6 +174,7 @@ a .logo {
   height: 45rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  padding: 4rem;
   background-color: #F2E3D4;
 }
 
@@ -187,7 +188,7 @@ a .logo {
   flex-wrap: wrap;
 }
 
-.enviar button {
+button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -210,9 +211,13 @@ a .logo {
   transition: all 0.4s;
 }
 
-.enviar button:hover {
+button:hover {
   background-color: darkgrey;
 
 }
 
+.colabtn{
+  display: flex;
+  margin: 32rem 5rem 2rem 45rem;
+}
 

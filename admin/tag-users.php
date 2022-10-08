@@ -24,8 +24,9 @@
 
 
         <div class="box">
-            <h3 style="text-align: center;">Titulação de usuário</h3>
-            <hr>
+        	<div class="titulo">
+        		<h3 style="text-align: center;">Titulação de usuário</h3>
+        	</div>
             <div class="arrumar">
                 <?php include('../php/connect.php');
 
@@ -40,10 +41,10 @@
 						<div class='container'>
 							<form action='../php/tag-include.php' method='post'>
 								<div class='input1'>
-								<input style='border-radius: 10px; height: 40px ;  width: 300px;' readonly name='username' value='$row->ds_username'>
+								<input style='border-radius: 10px; height: 40px; width: 300px; border: 2px solid #F2955E; padding-left:1rem;' readonly name='username' value='$row->ds_username'>
 							</div>
 							<div class='input2'>
-								<input style='border-radius: 10px; height: 40px ; width: 300px;' type='email' readonly name='mail' value='$row->ds_email'>
+								<input style='border-radius: 10px; height: 40px ; width: 300px; border: 2px solid #F2955E; padding-left:1rem;' type='email' readonly name='mail' value='$row->ds_email'>
 		</div>
 		</div>
 								<h4>Dar um título</h4>
@@ -53,8 +54,8 @@
 								<input type='radio' value='pal' name='tag' id='palestrante'> Palestrante
 		</div>
 
-								<button style='margin-left: 4rem;' type='submit' value='Salvar'>Salvar</button>
-								<button><a href='javascript:history.go(-1)'>Voltar</a></button>
+								<button style='margin-left: 4rem; font-family: Poppins; font-size:16px;' type='submit' value='Salvar'>Salvar</button>
+								<button style='font-family: Poppins; font-size: 16px;'><a href='javascript:history.go(-1)'>Voltar</a></button>
 								
 							</form>
 						";

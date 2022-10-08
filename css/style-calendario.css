@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-@media (min-width: 40em) {
+@media (min-width: 1em) {
 
 body, html{
   margin: 0;
@@ -126,5 +126,20 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] { 
   -moz-appearance: textfield;
   appearance: textfield;
+
+}
+
+.footer {
+  background-color: darkgrey;
+  position: absolute;
+  bottom: 0;
+  height: 8rem;
+  color: #FFF;
+  width: 100%;
+
+}
+
+span{
+  margin-left: 44rem;
 
 }
