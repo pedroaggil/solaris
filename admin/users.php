@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -53,14 +54,18 @@
 		<div class="arrumar">
 	<div class="container">
 		<div class="row">
-			<div class="col-1">
+			<div class="comunista col-3">
 				<span class="negrito">Nome</span>
 			</div>
-			<div class="col-6">
+			<div class="col-1"></div>
+			<div class="col-4">
 				<span class="negrito" style="margin: 0  0 400px 0;">Email</span>
 			</div>
+			<div class="col-2 colunalink">
+				<a href='#'><img style='width: 30px; height: 30px; background-color:#F2955E; border-radius:3rem;' src='../img/mais.png' alt='Alterar registro'></a></div>
 			</div>
 		</div>
+	</div>
 		<?php include '../php/connect.php';
 
 				$search =  "SELECT *
@@ -71,23 +76,23 @@
 				while ($row = $result -> fetch_object()) {
 					echo "
 					<div class='arrumar2'>
-					<div class='row'>
-						<div class='col-3'>
-							<span>$row->ds_username</span>
-						</div>	
-						<div class='col-1'>
+						<div class='row'>
+							<div class='col-3'>
+								<span>$row->ds_username</span>
+							</div>	
+							<div class='col-1'>
+							</div>
+							<div class='col-4'>
+								<span>$row->ds_email</span>
+							</div>
+						
+							<div class='col-1'>
+								<button><a href='../php/delete-user.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/excluir.png' alt='Deletar registro'></a></button>
+							</div>
+							<div class='col-1'>
+								<button><a href='tag-users.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/editar.png' alt='Alterar registro'></a></button>
+							</div>
 						</div>
-						<div class='col-4'>
-							<span>$row->ds_email</span>
-						</div>
-					
-						<div class='col-1'>
-							<button><a href='../php/delete-user.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/excluir.png' alt='Deletar registro'></a></button>
-						</div>
-						<div class='col-1'>
-							<button><a href='tag-users.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/editar.png' alt='Alterar registro'></a></button>
-						</div>
-					</div>
 					</div>
 					";				
 				}

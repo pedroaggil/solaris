@@ -22,17 +22,19 @@
 					$lvl = $_SESSION['level'];
 	    
 	                if ($_SESSION['level'] == 1) {
+						echo 'Parece que deu tudo certo com seu login, a não ser que você seja um estelionatário sem vergonha';
 						header('Location: ../home-log.php');
 
 	            	} else if ($_SESSION['level'] == 2) {
-	                	header('Location: ../admin/index.html');
-
-	                } else {
-						header('Location: ../login/index.html');
-
-	                }
+						echo 'E ae meu patrão, finalmente resolveu trabalhar né vagabundo';
+	                	header('Location: ../admin/index.php');
+					}
 	            }
-	        }
+	        } else {
+				?><script> alert('Login e/ou senha inválidos, tente novamente'); </script><?php
+				header('Location: ../login/index.html');
+
+			}
 	    }
 	}
 ?>

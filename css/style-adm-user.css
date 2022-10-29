@@ -65,11 +65,13 @@ text-align:center;
     border: 200px;
 }
 .arrumar{
-    margin: 0px 0 50px 0 ;
+    width: 100%;
+    margin: 0 0 50px 0;
 }
 
 .arrumar2{
     margin-left: 50px;
+    margin-bottom: -35px;
 }
 span{
 margin: 0px 20px;
@@ -163,4 +165,9 @@ a {
      color: #000;
      font-weight: bold;
      font-size: 20px;
-     }
+}
+
+.comunista {
+    position: relative;
+    float: left;
+}

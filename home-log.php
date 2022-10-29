@@ -35,7 +35,8 @@
           <li class="nav-item"><a href="#colaboradores" class="nav-link">Colaboradores</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
-          <li class="nav-item"><a href="calendario/index.html" class="nav-link">Agenda</a></li>
+          <li class="nav-item"><a href="calendario/index.php" class="nav-link">Agenda</a></li>
+          <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="admin/index.php" class="nav-link">Admin</a></li>'; } ?>
         </ul>
 
 
@@ -44,9 +45,9 @@
             <img src="img/user.png"/>
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="perfil/perfil.html">Meu perfil</a></li>
+            <li><a class="dropdown-item" href="perfil/profile.php">Meu perfil</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" name="outin" id="outin" href="home-nolog.html">Sair</a></li>
+            <li><a class="dropdown-item" name="outin" id="outin" href="php/logout.php">Sair</a></li>
           </ul>
         </div>
       </div>
@@ -55,7 +56,7 @@
   <!-- navbar -->
 
   <!-- carrossel -->
-  <div class="teste">
+  <!-- <div class="teste">
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -91,7 +92,9 @@
       <span class="visually-hidden"></span>
     </button>
   </div>
-  </div>
+  </div> -->
+
+  
   <!-- carrossel -->
 
 
@@ -107,8 +110,8 @@
       <div class="col-lg-4">
         <img src="img/g.png">
 
-        <h2 class="fw-bold">Garcinoma </h2>
-        <p>O garcinoma espinocelular é o 2° mais comum. Ocorre devido a presença de células escamosas na epiderme (parte superficial da pele).</p>
+        <h2 class="fw-bold">Carcinoma </h2>
+        <p>O carcinoma espinocelular é o 2° mais comum. Ocorre devido a presença de células escamosas na epiderme (parte superficial da pele).</p>
       </div>
       <div class="col-lg-4">
         <img src="img/m.png">
@@ -125,7 +128,7 @@
     <!-- nos conheça -->
     <div class="row featurette" id="sobre">
         <div class="col-md-7">
-          <h2 class="featurette-heading"><a class="logo"><img src="img/s.png"/></a>&nbsp;Nos conheça mais</h2>
+          <h2 class="featurette-heading fw-bold" style="font-size: 48px;"><a class="logo"><img src="img/s.png"/></a>&nbsp;Conheça mais sobre nós</h2>
           <h3 class="sub"><span class="text-muted">Entenda qual o motivo do projeto Solaris</span></h3>
           <p class="lead">Nossa maior motivação para criá-lo foi a consciência de que boa parte da população, que está cotidianamente exposta ao sol, não possui conhecimento acerca do câncer de pele e nem como evitá-lo, contribuindo para o aumento do índice anual no país.
           <br><br>
@@ -133,7 +136,7 @@
           </p>
         </div>
         <div class="col-md-5">
-          <img src="img/.jpg" width="100%" height="100%">
+          <img src="img/.jpg" width="100%" height="100%"/>
         </div>
       </div>
     <!-- nos conheça -->
@@ -152,7 +155,7 @@
         </a>
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('img/verao.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Quantos tipos existem? Aprenda sobre a regra ABCDE</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="img/icon.png" alt="Solaris" width="34" height="34" class="rounded-circle border border-white">
@@ -171,7 +174,7 @@
         </a>
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('img/solaris.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Curioso? Nos acompanhe em...</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="img/icon.png" alt="Solaris" width="32" height="32" class="rounded-circle border border-white">
@@ -190,7 +193,7 @@
         </a>
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('img/sinais.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Se atente aos sinais! Proteção é essencial</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="img/icon.png" alt="Solaris" width="32" height="32" class="rounded-circle border border-white">

@@ -35,7 +35,8 @@
           <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
-          <li class="nav-item"><a href="index.html" class="nav-link">Agenda</a></li>
+          <li class="nav-item"><a href="index.php" class="nav-link">Agenda</a></li>
+		  <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="../admin/index.html" class="nav-link">Admin</a></li>'; } ?>
         </ul>
 
 
@@ -44,11 +45,11 @@
             <img src="../img/user.png"/>
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="../perfil/perfil.html">Meu perfil</a></li>
+            <li><a class="dropdown-item" href="../perfil/profile.php">Meu perfil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" name="outin" id="outin" href="../login/index.html">Entrar</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" name="outin" id="outin" href="../home-nolog.html">Sair</a></li>
+            <li><a class="dropdown-item" name="outin" id="outin" href="../php/logout.php">Sair</a></li>
           </ul>
         </div>
       </div>
@@ -153,8 +154,8 @@
 	      <span class="text-muted">solarisccp@gmail.com | &copy; 2022 | Move - ONG Contra o câncer de pele</span><br>
 	    </div>
 	  </footer>
-	  </div> -->
-  <!-- footer -->
+	  </div>
+  <!-- footer --> -->
 
 	<!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

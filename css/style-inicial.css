@@ -112,23 +112,14 @@ header .nav-link:hover {
 
 }
 
-.carousel {
+/* .carousel {
   margin-bottom: 4rem;
-  /*background-color: darkgrey;*/
-
-}
-
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-
-}
-
+  /*background-color: darkgrey;
 
 .carousel-item {
   height: 32rem;
 
-}
+} */
 
 a .logo {
   display: block;
