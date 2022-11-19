@@ -1,8 +1,9 @@
+<?php include('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Perfil &middot; <?= $_SESSION['username']; ?></title>
+	<title>Perfil</title>
 	<title>Solaris</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
@@ -49,11 +50,11 @@
   	</header>
   	<!-- navbar -->
 	
-	<?php include('../php/connect.php');
+	<?php
 
 		$search =  "SELECT * 
 					FROM tb_user 
-					WHERE cd_user = ". $_SESSION['username'];
+					WHERE cd_user = ". $_SESSION['id'];
 
 		$query = $mysqli->query($search);
 
@@ -61,29 +62,29 @@
 			echo "<div class='container main'<br>";
 			echo "<div class='user'>Olá, $sql->ds_username</div>";
 
-			if ($sql->ds_tag != null) {
-				if ($sql->ds_tag == "esp") {
-					echo "<div class='tag'>Especialista</div>";
+		 	if ($sql->ds_tag != null) {
+		 		if ($sql->ds_tag == "esp") {
+		 			echo "<div class='tag'>Especialista</div>";
 
-				} elseif ($sql->ds_tag == "med") {
-					echo "<div class='tag'>Médico</div>";
+		 		} elseif ($sql->ds_tag == "med") {
+		 			echo "<div class='tag'>Médico</div>";
 				
-				} elseif ($sql->ds_tag == "pal") {
-					echo "<div class='tag'>Palestrante</div>";
+		 		} elseif ($sql->ds_tag == "pal") {
+		 			echo "<div class='tag'>Palestrante</div>";
 
-				}
-			} else {
-				echo "<br>";
+		 		}
+		 	} else {
+		 		echo "<br>";
 				
-			}
+		 	}
 
-			echo "<br>";
-			echo "<input type='text' class='valor' readonly value='$sql->ds_username'><br>";
-			echo "<input type='text' class='valor' readonly value='$sql->ds_email'>
+		 	echo "<br>";
+		 	echo "<input type='text' class='valor' readonly value='$sql->ds_username'><br>";
+		 	echo "<input type='text' class='valor' readonly value='$sql->ds_email'>
 
-			<button class='editar' type='submit' value='#'><a href='editar-perfil.php'class='text-white' style='text-decoration:none;'>Editar</a></button>
-			</div>";
-		}
+		 	<button class='editar' type='submit' value='#'><a href='editar-perfil.php'class='text-white' style='text-decoration:none;'>Editar</a></button>
+		 	</div>";
+		 }
 
 	?>
 	<div class="title">
@@ -97,19 +98,18 @@
 
 		$res = $mysqli->query($src__events);
 
-		// while ($sql_src = $res -> fetch_object()) {
-		// 	echo '
-		// 	<div class="card" style="width: 18rem; margin-top: 3rem;">
-		// 		<img class="card-img-top" src="..." alt="Card image cap">
-		// 		<div class="card-body">
-		// 			<h5 class="card-title">Card title</h5>
-		// 			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-		// 			<a href="#" class="btn btn-primary">Go somewhere</a>
-		// 		</div>
-		// 		</div>
-  		// 	</div>
-		// 	';
-		// }
+		while ($sql_src = $res -> fetch_object()) {
+			?>
+		 	<div class="card" style="width: 18rem; margin-top: 3rem;">
+		 		<img class="card-img-top" src="..." alt="Card image cap">
+		 		<div class="card-body">
+		 			<h5 class="card-title"><?= $sql_src->dt_data; ?> : <?= $sql_src->hr_hora; ?></h5>
+		 			<p class="card-text"><?= $sql_src->ds_endereco; ?>, <?= $sql_src->nm_bairro; ?> - <?= $sql_src->nm_cidade; ?></p>
+		 		</div>
+		 		</div>
+  		 	</div>
+		 	<?php 
+		}
 
 	 ?>
 

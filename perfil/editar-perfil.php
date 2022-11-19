@@ -1,18 +1,9 @@
-<?php include('../php/connect.php');
-
-	$search = "SELECT * FROM tb_user WHERE cd_user = ". $_SESSION['id'];
-	$result = $mysqli->query($search);
-
-	while ($row = $result -> fetch_object()) {
-		$username = $row->ds_username;
-	}
-
-?>
+<?php include('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Editar perfil &middot; <?= $username; ?></title>
+	<title>Editar perfil</title>
 	<title>Solaris</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
@@ -59,7 +50,10 @@
   	</header>
   	<!-- navbar -->
 	
-	<?php 
+	<?php
+
+		$search = "SELECT * FROM tb_user WHERE cd_user = ". $_SESSION['id'];
+		$result = $mysqli->query($search);
 
 		while ($row = $result -> fetch_object()) {
 			echo "<div class='container main'<br>";
@@ -94,21 +88,7 @@
 			echo '</form>';
 		}
 
-	 ?>	
-
-			<div class="title">
-  			<h4 style="font-weight: 600;">Seus eventos salvos/</h4>
-  			<p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto</p>
-
-			  <!-- <div class="card" style="width: 18rem; margin-top: 3rem;">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-				</div>
-				</div>
-  			  </div> -->
+	 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
