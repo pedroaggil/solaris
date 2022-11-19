@@ -20,16 +20,15 @@
       <main>
 <div class="box">
       <h3>Comprovação de palestra</h3>
-      <div class="text">
-<?php
-include_once("connect.php");
+      <div class="container">
+<?php include_once("connect.php");
+
 $_SESSION['tel'] = $_POST['tel'];
 $_SESSION['cidade'] = $_POST['cidade'];
 $_SESSION['bairro'] = $_POST['bairro'];
 $_SESSION['endereco'] = $_POST['endereco'];
 $_SESSION['data'] = $_POST['data'];
 $_SESSION['horario'] = $_POST['horario'];
-$_SESSION['email'] = $_POST['email'];
 
 $tel = $_SESSION['tel'];
 $cidade = $_SESSION['cidade'];
@@ -37,12 +36,13 @@ $bairro = $_SESSION['bairro'];
 $endereco = $_SESSION['endereco']; 
 $data = $_SESSION['data']; 
 $horario = $_SESSION['horario'];
-$email = $_SESSION['email'];
+$mail = $_POST['email'];
 
 //pendente ou definitivo, banco de dados, salvar data
 //SELECT * FROM tb_usuario where cd_usuario = informação da sessão
 
-$sql = "INSERT INTO tb_agenda (ds_email, nr_telefone, ds_cidade, ds_bairro, ds_logradouro, hr_hora, dt_data) VALUES ('".$email."', '".$tel."', '" .$cidade. "', '" .$bairro. "', '" .$endereco. "' , '" .$horario. "', '" .$data. "')";
+$sql = "INSERT INTO tb_agenda (cd_agenda, ds_email, nr_tel, hr_hora, dt_data, ds_endereco, nm_bairro, nm_cidade, st_publica, st_aprovada, id_salvar)
+        VALUES (null, '".$mail."', '".$tel."', '" .$horario. "', '" .$data. "', '" .$endereco. "', '" .$bairro. "', '" .$cidade. "', 1, 0, 0)";
 
 if ( mysqli_query ( $mysqli, $sql )) {   
       echo "Telefone: " . $tel . "<br>";

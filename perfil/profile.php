@@ -1,9 +1,8 @@
-<?php include('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Perfil &middot; <?= $row->ds_username; ?></title>
+	<title>Perfil &middot; <?= $_SESSION['username']; ?></title>
 	<title>Solaris</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
@@ -32,7 +31,6 @@
           <li class="nav-item"><a href="../home-log.php #sobre" class="nav-link">Sobre nós</a></li>
           <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
           <li class="nav-item"><a href="../calendario/index.php" class="nav-link">Agenda</a></li>
           <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="admin/index.html" class="nav-link">Admin</a></li>'; } ?>
         </ul>
@@ -51,23 +49,26 @@
   	</header>
   	<!-- navbar -->
 	
-	<?php 
-		
-		$search = "SELECT * FROM tb_user WHERE cd_user = ". $_SESSION['id'];
-		$result = $mysqli->query($search);
+	<?php include('../php/connect.php');
 
-		while ($row = $result -> fetch_object()) {
+		$search =  "SELECT * 
+					FROM tb_user 
+					WHERE cd_user = ". $_SESSION['username'];
+
+		$query = $mysqli->query($search);
+
+		while ($sql = $query->fetch_object()) {
 			echo "<div class='container main'<br>";
-			echo "<div class='user'>Olá, $row->ds_username</div>";
+			echo "<div class='user'>Olá, $sql->ds_username</div>";
 
-			if ($row->ds_tag != null) {
-				if ($row->ds_tag == "esp") {
+			if ($sql->ds_tag != null) {
+				if ($sql->ds_tag == "esp") {
 					echo "<div class='tag'>Especialista</div>";
 
-				} elseif ($row->ds_tag == "med") {
+				} elseif ($sql->ds_tag == "med") {
 					echo "<div class='tag'>Médico</div>";
 				
-				} elseif ($row->ds_tag == "pal") {
+				} elseif ($sql->ds_tag == "pal") {
 					echo "<div class='tag'>Palestrante</div>";
 
 				}
@@ -77,28 +78,40 @@
 			}
 
 			echo "<br>";
-			echo "<input type='text' class='valor' readonly value='$row->ds_username'><br>";
-			echo "<input type='text' class='valor' readonly value='$row->ds_email'>
+			echo "<input type='text' class='valor' readonly value='$sql->ds_username'><br>";
+			echo "<input type='text' class='valor' readonly value='$sql->ds_email'>
 
 			<button class='editar' type='submit' value='#'><a href='editar-perfil.php'class='text-white' style='text-decoration:none;'>Editar</a></button>
 			</div>";
 		}
 
-	 ?>	
+	?>
+	<div class="title">
+  		<h4 style="font-weight: 600;">Seus eventos salvos/</h4>
+  		<p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto</p>
+	<?php
 
-			<div class="title">
-  			<h4 style="font-weight: 600;">Seus eventos salvos/</h4>
-  			<p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto</p>
+		$src__events = "SELECT * 
+		FROM tb_agenda 
+		WHERE id_salvar = 1";
 
-			  <!-- <div class="card" style="width: 18rem; margin-top: 3rem;">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-				</div>
-				</div>
-  			  </div> -->
+		$res = $mysqli->query($src__events);
+
+		// while ($sql_src = $res -> fetch_object()) {
+		// 	echo '
+		// 	<div class="card" style="width: 18rem; margin-top: 3rem;">
+		// 		<img class="card-img-top" src="..." alt="Card image cap">
+		// 		<div class="card-body">
+		// 			<h5 class="card-title">Card title</h5>
+		// 			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+		// 			<a href="#" class="btn btn-primary">Go somewhere</a>
+		// 		</div>
+		// 		</div>
+  		// 	</div>
+		// 	';
+		// }
+
+	 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>

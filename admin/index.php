@@ -36,7 +36,6 @@
                   <li class="nav-item"><a href="../home-log.php #sobre " class="nav-link">Sobre nós</a></li>
                   <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
                   <li class="nav-item"><a href="../calendario/index.php" class="nav-link">Agenda</a></li>
                   <li class="nav-item"><a href="index.php" class="nav-link">Admin</a></li>
                 </ul>
@@ -72,44 +71,29 @@
                         <button> <a href="#" class="text-white">Artigos</a></button>
                     </div>
                     <div class="col-2">
-                        <button> <a href="#" class="text-white">Publicar artigo</a></button>  
+                        <button> <a href="/solaris/artigos/artigos.html" class="text-white">Publicar artigo</a></button>  
                     </div>
                 </div> 
 
             <div class="row">
                 <div class="col-2 " >
-                   <button><a href="#" class="text-white">Palestras</a></button>
+                   <button><a href="../palestras/solicitacao-p-adm.html" class="text-white">Solicitações de palestras</a></button>
                 </div>
                 <div class="col-2">
                     <button> <a href="#" class="text-white">Palestras públicas</a></button>
                 </div>
                 <div class="col-2">
-                    <button> <a href="#" class="text-white">Agendar palestra</a></button>
+                    <button> <a href="../palestras/agendar-p-adm.php" class="text-white">Agendar palestra pública</a></button>
                 </div>
                 <div class="col-2">
-                    <button> <a href="#" class="text-white">Colaboradores</a></button>
+                    <button> <a href="#" class="text-white">Novo colaborador</a></button>
                 </div>
             </div>
             </div>
     </div>
     </main>
 
-     <!-- footer -->
-    <div class="footer">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-      &nbsp;
-      <div class="col-md-12 d-flex align-items-center">
-        <a class="insta text-muted" style="margin-left: 56rem;" href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><svg class="bi" width="8" height="8"><i class="bi bi-instagram"></i></a>
-        <a class="git text-muted" href="#"><svg class="bi" width="8" height="8"><i class="bi bi-github"></i></a>
-        <a class="linke text-muted" href="#"><svg class="bi" width="8" height="8"><i class="bi bi-linkedin"></i></a>
-      </div>
-      &nbsp;
-      <div class="col-md-12 d-flex align-items-center">
-        <span class="text-muted">solarisccp@gmail.com | &copy; 2022 | Move - ONG Contra o câncer de pele</span><br>
-      </div>
-    </footer>
-    </div>
-    <!-- footer -->
+     
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
