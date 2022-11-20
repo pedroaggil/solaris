@@ -1,3 +1,4 @@
+<?php include('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -59,6 +60,39 @@
   <!-- públicos -->
   <div class="pub">
   	<h4>Eventos públicos</h4>
+      <div class="container">
+      <div class="row">
+      <?php 
+
+        $search =  "SELECT * 
+                    FROM tb_agenda 
+                    WHERE st_publica = 1
+                    ORDER BY dt_data ASC";
+
+        $query = $mysqli->query($search);
+
+        while ($sql = $query -> fetch_object()) {
+          ?>
+              <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="..." class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <?php
+                        echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
+                      ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <?php
+        }
+      
+      ?>
+      </div>
+      </div>
+      <br>
+
   	<h4>Agende um evento você mesmo</h4>
   	
   	<hr class="divider">
