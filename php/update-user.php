@@ -18,6 +18,33 @@
     $oldPass = SHA1($_POST['pass']);
     $newPass = SHA1($_POST['new__pass']);
 
+    if (isset($_FILES['image'])) {
+
+        $img = $_FILES['image'];
+
+        if ($img['error']) { // Envio falhou
+            unset($img);
+        }
+
+        if ($img['size'] > 3097152) { // Tamanho superior a 2MB
+            unset($img);
+        }
+
+        $directory = '../img/logo-user/';
+        $nameImage = $img['name'];
+        $newNameImage = uniqid();
+        $extension = strtolower(pathinfo($nameImage, PATHINFO_EXTENSION));
+
+        if ($extension != 'jpg' && $extension != 'jpeg' && $extension != 'png') { // Se a extensão for diferente de '.jpg', '.jpeg' ou '.png'
+            unset($img);
+        }
+
+        $path = $directory . $newNameImage . '.' . $extension;
+
+        $imgOk = move_uploaded_file($img['tmp_name'], $path);
+
+    }
+
     $search =  "SELECT * 
                 FROM tb_user 
                 WHERE cd_user = ". $user;
@@ -35,6 +62,24 @@
                             ds_username = '". $name ."', 
                             ds_senha = '". $newPass ."' 
                         WHERE cd_user = ". $user;
+        } elseif (isset($img)) {
+
+            if (isset($newPass) && isset($img)) {
+                $update =  "UPDATE tb_user 
+                        SET ds_email = '". $mail ."',
+                            ds_username = '". $name ."',  
+                            ds_senha = '".$newPass."', 
+                            img_perfil = '".$path."' 
+                        WHERE cd_user = ". $user;
+            } else {
+                $update =  "UPDATE tb_user 
+                            SET ds_email = '". $mail ."', 
+                                ds_username = '". $name ."', 
+                                ds_senha = '".$pass."', 
+                                img_perfil = '".$path."' 
+                            WHERE cd_user = ". $user;
+            }
+
         } else {
             $update =  "UPDATE tb_user 
                         SET ds_email = '". $mail ."', 

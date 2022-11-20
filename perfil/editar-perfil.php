@@ -57,7 +57,7 @@
 
 		while ($row = $result -> fetch_object()) {
 			echo "<div class='container main'<br>";
-			echo '<form method="post" action="../php/update-user.php">';
+			echo '<form method="post" enctype="multipart/form-data" action="../php/update-user.php">';
 			echo "<div class='user'>Olá, $row->ds_username</div>";
 
 			if ($row->ds_tag != null) {
@@ -78,6 +78,7 @@
 
 			echo "<br>";
 			echo "<input name='id' type='hidden' class='valor' value='$row->cd_user'><br>";
+			echo "<input name='image' type='file' accept='image/png, image/jpg, image/jpeg' class='valor' value='$row->img_perfil'><br>";
 			echo "<input name='name' type='text' class='valor' value='$row->ds_username'><br>";
 			echo "<input name='mail' type='text' class='valor' value='$row->ds_email'>";
             echo "<input name='pass' type='text' class='valor' placeholder='Confirme sua senha'>";
