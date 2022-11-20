@@ -71,6 +71,8 @@
 
         $query = $mysqli->query($search);
 
+        $user = $_SESSION['id'];
+
         while ($sql = $query -> fetch_object()) {
           ?>
               <div class="col-4">
@@ -82,6 +84,9 @@
                         echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
                       ?>
                     </p>
+                    <button>
+                      <a href="../php/save-lecture.php?event=<?= $sql->cd_agenda; ?>&user=<?= $user; ?>"></a>
+                    </button>
                   </div>
                 </div>
               </div>
