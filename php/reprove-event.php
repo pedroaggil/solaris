@@ -2,12 +2,16 @@
 
     $event = $_GET['event'];
 
-    $delete =  "DELETE 
-                FROM tb_agenda 
-                WHERE cd_agenda = ". $event;
+    echo $event;
 
-    if ($sql = $mysqli->query($delete)) {
-        echo 'VENCEMO PORA';
-    } else { echo $mysqli->error; }
+    // $delete =  "DELETE 
+    //             FROM tb_agenda 
+    //             WHERE cd_agenda = ". $event;
+
+   // echo $delete;
+
+    // if ($sql = $mysqli->query($delete)) {
+    //     header('Location: ../palestras/solicitacao-p-adm.php');
+    // } else { echo $mysqli->error; }
 
 ?>

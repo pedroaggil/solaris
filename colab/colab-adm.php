@@ -13,9 +13,9 @@
 <link rel="stylesheet" type="text/css" href="css/style-inicial.css">
 <script src="https://kit.fontawesome.com/235f508f3b.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="../css/solict-p-adm.css" />
+<link rel="stylesheet" href="../css/colab-adm.css"/>
 <link rel="icon" type="imagem/png" href="../img/icon.png " />
-<title>Solitações de palestras</title>
+<title>Administração Solaris</title>
 </head>
     <body>
           <!-- Navbar -->
@@ -30,8 +30,8 @@
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                   <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
-                  <li class="nav-item"><a href="../home-log.php #sobre " class="nav-link">Sobre nós</a></li>
-                  <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
+                  <li class="nav-item"><a href="../home-log.php#sobre " class="nav-link">Sobre nós</a></li>
+                  <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
                   <li class="nav-item"><a href="../calendario/index.php" class="nav-link">Agenda</a></li>
                   <li class="nav-item"><a href="../admin/index.php" class="nav-link">Admin</a></li>
@@ -52,54 +52,33 @@
 
     <main>
     <div class="box">
-        
-        <h3>Solicitações de palestras</h3>
-        <div class="arrumar">
-            <div class="container">
-                <div class="row">
-                    <div class="comunista col-3">
-                        <span class="negrito">Telefone</span>
-                    </div>
-                    <!-- <div class="col-1"></div>  -->
-                    <div class="col-3">
-                        <span class="negrito" style="margin: 0  0 400px 0;">Endereço</span>
-                    </div>
-                    <div class="col-2 colunalink">
-                        <span class="negrito" style="margin: 0  0 400px 0;">Data</span>
-                    </div>
-                </div>
-                <?php include '../php/connect.php';
-
-                    $search =  "SELECT *
-                                FROM tb_agenda
-                                WHERE st_aprovada = 0";
-
-                    if ($result = $mysqli->query($search)) {
-                      while ($row = $result -> fetch_assoc()) {
-                        echo '
-                        <div class="row">
-                         <div class="comunista col-3">
-                             <span class="">'. $row['nr_tel'] .'</span>
-                         </div>
-                         <!-- <div class="col-1"></div>  -->
-                         <div class="col-3">
-                             <span class="" style="margin: 0  0 400px 0;">'. $row['ds_endereco'] .'</span>
-                         </div>
-                         <div class="col-2 colunalink">
-                             <span class="" style="margin: 0  0 400px 0;">'. $row['dt_data'] .'</span>
-                         </div>
-                         <div class="col-1">
-                             <button><a href="../php/aprove-event.php?event='. $row["cd_agenda"] .'"><img style="width: 30px; height: 30px;" src="../img/marca-de-verificacao.png" alt="Aprovar evento"></a></button>
-                         </div>
-                         <div class="col-1">
-                             <button><a href="../php/reprove-event.php?event='. $row["cd_agenda"] .'"><img style="width: 30px; height: 30px;" src="../img/rejeitado.png" alt="Reprovar evento"></a></button>
-                         </div>
-                      ';				
-                      }
-                    } else { echo $mysqli->error; }
-
-                  ?>
+      <form method="post" action="../php/create-colab.php"></form>
+        <h3>Novo colaborador</h3>
+        <div class="container"> 
+            <div class="input1" style="display: inline-block;">
+              <input class="i1" name="name" placeholder="Empresa"></input>
+              <span></span>
+              <input class="i2" name="responsible" placeholder="Nome"></input>
             </div>
+            <br>
+            <div class="input2" style="display: inline-block;">
+              <input class="i3" name="mail" placeholder="E-mail"></input>
+              <span></span>
+              <input class="i4" name="cell" placeholder="Telefone"></input>
+            </div>
+            <br>
+            <!-- <input type="file" name="image"> -->
+        </div>
+        <div class="tag">
+            <h6>Tipo de colaborador</h6>
+            <input type='radio' value='Financeiro' name='tag' id='financeiro'> Financeiro
+            <input type='radio' value='Físico' name='tag' id='fisico'> Físico
+            <input type='radio' value='Didático' name='tag' id='didatico'> Didático
+        </div>
+            <br><br>
+
+            <button type='submit'>Salvar</button>
+                        
     </div>
     </main>
 

@@ -57,11 +57,19 @@
         $update;
 
         if (isset($newPass)) {
-            $update =  "UPDATE tb_user
-                        SET ds_email = '". $mail ."', 
-                            ds_username = '". $name ."', 
-                            ds_senha = '". $newPass ."' 
-                        WHERE cd_user = ". $user;
+            if ($pass == $oldPass) {
+                $update =  "UPDATE tb_user
+                            SET ds_email = '". $mail ."', 
+                                ds_username = '". $name ."', 
+                                ds_senha = '". $newPass ."' 
+                            WHERE cd_user = ". $user;
+            } elseif ($pass != $oldPass) {
+                header('Location: ../perfil/editar-perfil.php');
+            
+            } else {
+                echo $mysqli->error;     
+            }
+            
         } elseif (isset($img)) {
 
             if (isset($newPass) && isset($img)) {
@@ -87,19 +95,13 @@
                         WHERE cd_user = ". $user;
         }
 
-        if ($pass == $oldPass) {
-            if ($upd__sql = $mysqli->query($update)) {
-                header('Location: ../perfil/profile.php');
-            } else {
-                echo $mysqli->error;
-            }
-
-        } elseif ($pass != $oldPass) {
-            header('Location: ../perfil/editar-perfil.php');
         
+        if ($upd__sql = $mysqli->query($update)) {
+            header('Location: ../perfil/profile.php');
         } else {
-            echo $mysqli->error;     
+            echo $mysqli->error;
         }
+
     }
 
 ?>

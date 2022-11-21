@@ -19,7 +19,7 @@
 		echo 'Este evento já está cadastrado';
 	} else {
 		$update =  "INSERT INTO tb_agenda VALUES 
-						(null, '".$mail."', '".$tel."', '".$hour."', '".$date."', '".$addres."', '".$district."', '".$city."', 0, 0, 0)";
+						(null, '".$mail."', '".$tel."', '".$hour."', '".$date."', '".$addres."', '".$district."', '".$city."', 1, 1, 0)";
 
 		if ($sql = $mysqli->query($update)) {
 			header('Location: ../admin/index.php');

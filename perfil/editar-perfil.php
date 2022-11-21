@@ -78,7 +78,8 @@
 
 			echo "<br>";
 			echo "<input name='id' type='hidden' class='valor' value='$row->cd_user'><br>";
-			echo "<input name='image' type='file' accept='image/png, image/jpg, image/jpeg' class='valor' value='$row->img_perfil'><br>";
+			// echo '<label for="image">      Logo</label><br>';
+			// echo "<input name='image' id='image' type='file' accept='image/png, image/jpg, image/jpeg' class='valor'><br>";
 			echo "<input name='name' type='text' class='valor' value='$row->ds_username'><br>";
 			echo "<input name='mail' type='text' class='valor' value='$row->ds_email'>";
             echo "<input name='pass' type='text' class='valor' placeholder='Confirme sua senha'>";

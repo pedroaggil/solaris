@@ -85,7 +85,7 @@
                       ?>
                     </p>
                     <button>
-                      <a href="../php/save-lecture.php?event=<?= $sql->cd_agenda; ?>&user=<?= $user; ?>">Salve este evento no perfil</a>
+                      <a href="../php/save-lecture.php?event=<?= $sql->cd_agenda; ?>">Salve este evento no perfil</a>
                     </button>
                   </div>
                 </div>

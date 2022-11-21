@@ -1,14 +1,13 @@
 <?php include('connect.php');
 
-    $user = $_GET['user'];
     $event = $_GET['event'];
 
-    $insert =  "INSERT INTO tb_agenda_user 
-                VALUES (null, '".$user."', '".$event."', 1)";
+    $update =  "UPDATE tb_agenda 
+                SET id_salvar = 1 
+                WHERE cd_agenda = ". $event;
 
-    if ($sql = $mysqli->query($insert)) {
-       echo 'eeeeeh';
-       // header('Location: ../admin/index.php');
+    if ($sql = $mysqli->query($update)) {
+       header('Location: ../perfil/profile.php');
     } else {
         echo 'iiiiih';
         echo $mysqli->error;

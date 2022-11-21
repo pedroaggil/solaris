@@ -1,5 +1,5 @@
-<?php 
-  //if (isset($_SESSION['level']) && $_SESSION['level'] == 2) {
+<?php  include('../php/connect.php');
+  if (isset($_SESSION['level']) && $_SESSION['level'] == 2) {
     ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +55,7 @@
 
     <main>
     <div class="box">
-     <form class="form-horizontal" method="POST" action="../php/session.php">
+     <form class="form-horizontal" method="POST" action="../php/public-lecture.php">
     <div class="form">
     <div class="text">
         <h5 style="font-weight: 600;">Preencha as informações necessárias para a públicação da palestra</h5>
@@ -125,11 +125,8 @@
   </form>
   <!-- formulário -->
 
-
     </div>
     </main>
-
-     
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
@@ -138,8 +135,8 @@
 </html>
   <?php
 
- /* } else {
+  } else {
     header('Location: ../index.php');
     
-  }*/
+  }
 ?>

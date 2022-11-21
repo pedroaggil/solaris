@@ -66,37 +66,37 @@
 			</div>
 		</div>
 	</div>
-	<?php include '../php/connect.php';
+        <?php include '../php/connect.php';
 
-$search =  "SELECT *
-            FROM tb_user
-            WHERE nr_nivel = 1";
-$result = $mysqli->query($search);
+      $search =  "SELECT *
+                  FROM tb_user
+                  WHERE nr_nivel = 1";
+      $result = $mysqli->query($search);
 
-while ($row = $result -> fetch_object()) {
-    echo "
-    <div class='arrumar2'>
-        <div class='row'>
-            <div class='col-3'>
-                <span>$row->ds_username</span>
-            </div>	
-            <div class='col-1'>
-            </div>
-            <div class='col-4'>
-                <span>$row->ds_email</span>
-            </div>
-        
-            <div class='col-1'>
-                <button><a href='../php/delete-user.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/excluir.png' alt='Deletar registro'></a></button>
-            </div>
-            <div class='col-1'>
-                <button><a href='tag-users.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/editar.png' alt='Alterar registro'></a></button>
-            </div>
-        </div>
-    </div>
-    ";				
-}
-?> 
+      while ($row = $result -> fetch_object()) {
+          echo "
+          <div class='arrumar2'>
+              <div class='row'>
+                  <div class='col-3'>
+                      <span>$row->ds_username</span>
+                  </div>	
+                  <div class='col-1'>
+                  </div>
+                  <div class='col-4'>
+                      <span>$row->ds_email</span>
+                  </div>
+              
+                  <div class='col-1'>
+                      <button><a href='../php/delete-user.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/excluir.png' alt='Deletar registro'></a></button>
+                  </div>
+                  <div class='col-1'>
+                      <button><a href='tag-users.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/editar.png' alt='Alterar registro'></a></button>
+                  </div>
+              </div>
+          </div>
+          ";				
+      }
+      ?> 
 </div>
 </main>
 <br>

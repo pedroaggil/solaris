@@ -93,8 +93,8 @@
 	<?php
 
 		$src__events = "SELECT * 
-		FROM tb_agenda 
-		WHERE id_salvar = 1";
+						FROM tb_agenda 
+						WHERE id_salvar = 1";
 
 		$res = $mysqli->query($src__events);
 
@@ -105,7 +105,10 @@
 		 		<div class="card-body">
 		 			<h5 class="card-title"><?= $sql_src->dt_data; ?> : <?= $sql_src->hr_hora; ?></h5>
 		 			<p class="card-text"><?= $sql_src->ds_endereco; ?>, <?= $sql_src->nm_bairro; ?> - <?= $sql_src->nm_cidade; ?></p>
-		 		</div>
+    				<button>
+                      <a href="../php/unsave-lecture.php?event=<?= $sql_src->cd_agenda; ?>">Tire este evento do perfil</a>
+                    </button>
+				</div>
 		 		</div>
   		 	</div>
 		 	<?php 
