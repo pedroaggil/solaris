@@ -1,9 +1,9 @@
-<?php
+<?php include('../php/connect.php');
 
-  if (isset($_SESSION['id'])) {
+  if (isset($_SESSION['level'])) {
     header('Location: calendar-log.php');
   } else {
-    header('Location: calendar-nolog.html');
+    header('Location: calendar-nolog.php');
   }
 
 ?>

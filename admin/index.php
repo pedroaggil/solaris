@@ -1,5 +1,5 @@
-<?php 
-  //if (isset($_SESSION['level']) && $_SESSION['level'] == 2) {
+<?php include('../php/connect.php');
+  if ($_SESSION['level'] == 2) {
     ?>
 <!DOCTYPE html>
 <html>
@@ -13,9 +13,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/235f508f3b.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-<link rel="stylesheet" type="text/css" href="css/style-inicial.css">
-<script src="https://kit.fontawesome.com/235f508f3b.js" crossorigin="anonymous"></script>
-
 <link rel="stylesheet" href="../css/style-home-adm.css" />
 <link rel="icon" type="imagem/png" href="../img/icon.png " />
 <title>Administração Solaris</title>
@@ -27,16 +24,16 @@
 
               <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="#">
                 <img src="../img/logo.png"/>
               </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                   <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
-                  <li class="nav-item"><a href="../home-log.php #sobre " class="nav-link">Sobre nós</a></li>
-                  <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
-                  <li class="nav-item"><a href="../calendario/index.php" class="nav-link">Agenda</a></li>
+                  <li class="nav-item"><a href="../home-log.php#sobre" class="nav-link">Sobre nós</a></li>
+                  <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
+                  <li class="nav-item"><a href="../artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
+                  <li class="nav-item"><a href="../calendario/calendar-log.php" class="nav-link">Agenda</a></li>
                   <li class="nav-item"><a href="index.php" class="nav-link">Admin</a></li>
                 </ul>
 
@@ -65,29 +62,29 @@
                         <button><a href="users.php" class="text-white">Usuários</a></button>
                     </div>
                     <div class="col-2">
-                        <button><a href="new-admin.html" class="text-white">Novo ADM</a></button>
+                        <button><a href="new-admin.php" class="text-white">Novo ADM</a></button>
                     </div>
                     <div class="col-2">
-                        <button> <a href="#" class="text-white">Artigos</a></button>
+                        <button> <a href="../artigos/exibir_artigos.php" class="text-white">Artigos</a></button>
                     </div>
                     <div class="col-2">
-                        <button> <a href="/solaris/artigos/artigos.html" class="text-white">Publicar artigo</a></button>  
+                        <button> <a href="../artigos/artigos.html" class="text-white">Publicar artigo</a></button>  
                     </div>
                 </div> 
 
             <div class="row">
                 <div class="col-2 " >
-                   <button><a href="../palestras/solicitacao-p-adm.html" class="text-white">Solicitações de palestras</a></button>
+                   <button class="btn3"><a href="../palestras/solicitacao-p-adm.php" class="text-white">Solicitações de palestras</a></button>
                 </div>
-                <div class="col-2">
+                <!--<div class="col-2">
                     <button> <a href="#" class="text-white">Palestras públicas</a></button>
                 </div>
-                <div class="col-2">
-                    <button> <a href="../palestras/agendar-p-adm.php" class="text-white">Agendar palestra pública</a></button>
+                <div class="col-2">-->
+                    <button class="btn2"> <a href="../palestras/agendar-p-adm.php" class="text-white">Agendar palestra pública</a></button>
                 </div>
-                <div class="col-2">
+                <!--<div class="col-2">
                     <button> <a href="#" class="text-white">Novo colaborador</a></button>
-                </div>
+                </div>-->
             </div>
             </div>
     </div>
@@ -100,10 +97,4 @@
 
     </body>
 </html>
-    <?php
-
- /* } else {
-    header('Location: ../index.php');
-    
-  }*/
-?>
+    <?php } else { header('Location: ../index.php'); } ?>

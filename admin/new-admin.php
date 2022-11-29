@@ -1,3 +1,4 @@
+<?php include('../php/connect.php'); if ($_SESSION['level'] == 2) { ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/235f508f3b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/style-new-admin">
+    <link rel="stylesheet" href="../css/style-new-admin.css">
     <link rel="icon" type="imagem/png" href="../img/icon.png" />
 	<title>Novo ADM</title>
 </head>
@@ -26,9 +27,9 @@
                   <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
                   <li class="nav-item"><a href="../home-log.php#sobre " class="nav-link">Sobre nós</a></li>
                   <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+                  <li class="nav-item"><a href="../artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
                   <li class="nav-item"><a href="../calendario/index.html" class="nav-link">Agenda</a></li>
-                  <li class="nav-item"><a href="../admin/index.php" class="nav-link">Admin</a></li>
+                  <li class="nav-item"><a href="index.php" class="nav-link">Admin</a></li>
                 </ul>
 
 
@@ -48,10 +49,10 @@
             <div class="box">
                 <div class="inner-box">
                     <div class="forms-wrap">
-                        <form action="../php/new-user.php" method="post" autocomplete="off" class="sign-in-form">
+                        <form action="../php/new-admin.php" method="post" autocomplete="off" class="sign-in-form">
                             <div class="heading">
-                                <h2>Cadastrar usuário</h2>
-                            </div>
+                                <h2>Cadastrar administrador</h2>
+                          	</div>
                             <div class="actual-form">
                                <div class="input-wrap">
                                     <input type="text" name="username" minlength="4" class="input-field" autocomplete="off" required/>
@@ -81,3 +82,4 @@
 
 </body>
 </html>
+<?php } else { header('Location: ../index.php'); } ?>

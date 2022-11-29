@@ -1,3 +1,4 @@
+<?php include('../php/connect.php');  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,9 +27,9 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li class="nav-item"><a href="../home-nolog.php" class="nav-link">Ínicio</a></li>
-          <li class="nav-item"><a href="../home-nolog.html #sobre" class="nav-link">Sobre nós</a></li>
-          <li class="nav-item"><a href="../home-nolog.html #colaboradores" class="nav-link">Colaboradores</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+          <li class="nav-item"><a href="../home-nolog.php#sobre" class="nav-link">Sobre nós</a></li>
+          <li class="nav-item"><a href="../home-nolog.php#colaboradores" class="nav-link">Colaboradores</a></li>
+          <li class="nav-item"><a href="../artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="index.php" class="nav-link">Agenda</a></li>
         </ul>
 
@@ -53,9 +54,9 @@
   	<hr class="divider">
   </div>
   <!-- título -->
-  <!-- públicos -->
-  <div class="pub">
-    <h4>Eventos públicos</h4>
+   <!-- públicos -->
+   <div class="pub">
+  	<h4>Eventos públicos</h4>
       <div class="container">
       <div class="row">
       <?php 
@@ -64,24 +65,30 @@
                     FROM tb_agenda 
                     WHERE st_publica = 1
                     ORDER BY dt_data ASC";
-
+        
         $query = $mysqli->query($search);
 
         while ($sql = $query -> fetch_object()) {
           ?>
-              <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                  <img src="..." class="card-img-top">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <?php
-                        echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
-                      ?>
-                    </p>
-                  </div>
-                </div>
+          <div class="card" style="width:20rem; margin-bottom:3rem;">
+              <!-- <img height="10vh" src="../img/verao.jpg" class="card-img-top"> -->
+              <div class="card-body">
+                  <p class="card-text">
+                    <?php
+                      echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
+                    ?>
+                  </p>
+                  <?php 
+
+                    if (isset($_SESSION['id'])) {
+                      echo '<div><a href="../php/save-lecture.php?event='. $sql->cd_agenda .'"><button class="salvar-ev"style="text-decoration:none;">Salve este evento no perfil</button></a></div>';
+
+                    }
+
+                  ?>
               </div>
-            <?php
+          </div>
+          <?php
         }
       
       ?>
@@ -93,7 +100,7 @@
   	
   	<hr class="divider">
         <h5 class="agende"><i class="bi bi-pencil-square"></i>Palestras gratuitas<button><a href="calendario.php" class="agendar text-decoration-none text-white">Agendar</a></button></h5>
-  	<hr class="divider">
+    <hr class="divider">
   </div>
   <!-- públicos -->
 

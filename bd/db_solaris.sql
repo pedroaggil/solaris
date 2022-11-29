@@ -7,12 +7,13 @@ CREATE TABLE tb_user(
 	ds_username VARCHAR(80) NOT NULL,
 	nr_nivel INT(1) NOT NULL,
 	ds_senha VARCHAR(100) NOT NULL,
-	img_perfil BLOB,
+	img_perfil VARCHAR(200),
 	ds_tag VARCHAR(20)
 );
 
 CREATE TABLE tb_agenda(
 	cd_agenda INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nm_titulo VARCHAR (100) NOT NULL,
 	ds_email VARCHAR(100) NOT NULL,
 	nr_tel VARCHAR(15) NOT NULL,
 	hr_hora TIME,
@@ -20,6 +21,9 @@ CREATE TABLE tb_agenda(
 	ds_endereco VARCHAR(100) NOT NULL,
 	nm_bairro VARCHAR(45),
 	nm_cidade VARCHAR(45),
+	ds_tema VARCHAR(100),
+	ds_descricao VARCHAR(300),
+	nm_palestrante VARCHAR(100),
 	st_publica INT,
 	st_aprovada INT,
 	id_salvar INT,
@@ -38,7 +42,8 @@ CREATE TABLE tb_artigos(
 	id_user INT NOT NULL,
 	ds_conteudo TEXT,
 	nm_titulo VARCHAR(45) NOT NULL,
-	ds_tag VARCHAR(100) NOT NULL
+	ds_tag VARCHAR(100) NOT NULL,
+	nm_autor VARCHAR(100)
 );
 
 CREATE TABLE tb_colaborador(

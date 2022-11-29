@@ -1,6 +1,5 @@
-<?php
-	session_start();
-	if ($_SESSION['id']){
+<?php include('../php/connect.php'); 
+	if (isset($_SESSION['id'])) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +24,7 @@
 
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-      <a class="navbar-brand" href="../home-log.php">
+      <a class="navbar-brand" href="#">
         <img src="../img/logo.png"/>
       </a>
 
@@ -33,9 +32,9 @@
           <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
           <li class="nav-item"><a href="../home-log.php #sobre" class="nav-link">Sobre nós</a></li>
           <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+          <li class="nav-item"><a href="../artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="index.php" class="nav-link">Agenda</a></li>
-		  <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="../admin/index.html" class="nav-link">Admin</a></li>'; } ?>
+		  <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="../admin/index.php" class="nav-link">Admin</a></li>'; } ?>
         </ul>
 
 
@@ -43,7 +42,7 @@
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../img/user.png"/>
           </a>
-          <ul class="dropdown-menu text-small">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="../perfil/profile.php">Meu perfil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" name="outin" id="outin" href="../php/logout.php">Sair</a></li>
@@ -67,6 +66,7 @@
 		<div class="text">
   			<h5 style="font-weight: 600;">Preencha as informações necessárias para a solicitação da palestra</h5>
   		</div>
+          
 		<div class="form-group">
 		<label for="nome" class="col-sm-2 control-label">Nome</label>
 		<div class="col-sm-10">
@@ -75,16 +75,23 @@
 		</div>
 
 		<div class="form-group">
-		<label for="tel" class="col-sm-2 control-label">Telefone</label>
+		<label for="titulo" class="col-sm-2 control-label">Título do evento</label>
 		<div class="col-sm-10">
-			<input type="number" name="tel" class="form-control" id="tel" placeholder="Telefone" required>
+			<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Título" required="">
 		</div>
 		</div>
-
-		<div class="form-group">
+		
+        <div class="form-group">
 		<label for="email" class="col-sm-2 control-label">E-mail</label>
 		<div class="col-sm-10">
 			<input type="email" name="email" class="form-control" id="email" placeholder="E-mail" required>
+		</div>
+		</div>
+          
+		<div class="form-group">
+		<label for="tel" class="col-sm-2 control-label">Telefone</label>
+		<div class="col-sm-10">
+			<input type="number" name="tel" class="form-control" id="tel" placeholder="Telefone" required>
 		</div>
 		</div>
 
@@ -96,9 +103,23 @@
 		</div>
 
 		<div class="form-group">
-		<label for="bairro" class="col-sm-2 control-label">Bairro</label>
+		<label for="tema" class="col-sm-2 control-label">Temática</label>
 		<div class="col-sm-10">
-			<input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro" required>
+			<input type="text" name="tema" class="form-control" id="tema" placeholder="Temática" required="">
+		</div>
+		</div>
+
+		<div class="form-group">
+		<label for="descricao" class="col-sm-2 control-label">Descrição</label>
+		<div class="col-sm-10">
+			<textarea name="descricao" id="descricao" rows="10"></textarea>
+		</div>
+		</div>
+
+		<div class="form-group">
+		<label for="palestrante" class="col-sm-2 control-label">Palestrante</label>
+		<div class="col-sm-10">
+			<input type="text" name="palestrante" class="form-control" id="palestrante" placeholder="Palestrante" required="">
 		</div>
 		</div>
 
@@ -109,6 +130,13 @@
 		</div>
 		</div>
 
+        <div class="form-group">
+		<label for="bairro" class="col-sm-2 control-label">Bairro</label>
+		<div class="col-sm-10">
+			<input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro" required>
+		</div>
+		</div>
+          
 		<div class="form-group">
 		<label for="data" class="col-sm-2 control-label">Data</label>
 		<div class="col-sm-10">
@@ -131,13 +159,12 @@
 		</div>
 
 		<div class="footer">
-			<button type="reset" value="Reset">Limpar</button>
-			<button type="submit">Prosseguir</button>
+			<button type="reset" value="Reset" class="text-white">Limpar</button>
+			<button type="submit" class="text-white">Prosseguir</button>
 		</div>
 		</div>	
 	</form>
 	<!-- formulário -->
-
 
 
 	<!-- JavaScript -->
@@ -147,9 +174,4 @@
 
 </body>
 </html>
-<?php
-	}else{
-		header("Location: ../login/index.html");	
-	}
-
-?>
+<?php } else { header('Location: ../login/index.html'); } ?>

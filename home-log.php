@@ -33,7 +33,7 @@
           <li class="nav-item"><a href="home-log.php" class="nav-link">Ínicio</a></li>
           <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
           <li class="nav-item"><a href="#colaboradores" class="nav-link">Colaboradores</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+          <li class="nav-item"><a href="artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="calendario/index.php" class="nav-link">Agenda</a></li>
           <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="admin/index.php" class="nav-link">Admin</a></li>'; } ?>
         </ul>
@@ -55,45 +55,31 @@
   <!-- navbar -->
 
   <!-- carrossel -->
-  <!-- <div class="teste">
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="container">
-          <div class="carousel-img"> 
-            <a href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><img src="img/banner3.jpg"></a>
-          </div>
-        </div>
-      </div>
+	<div class="content">
+    <div class="slides">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
 
-      <div class="carousel-item">
-        <div class="container">
-          <div class="carousel-img">
-            <img src="img/banner2.jpg">
-          </div>
+        <div class="slide s1">
+          <img src="img/banner.jpg" alt="">
         </div>
-      </div>
 
-      <div class="carousel-item">
-        <div class="container">
-          <div class="carousel-img">
-           <img src="img/banner.jpg">
-          </div>
+        <div class="slide">
+          <img src="img/banner2.jpg" alt="">
         </div>
-      </div>
+
+        <div class="slide">
+          <a href="https://www.instagram.com/p/CklwNwWp3ge/?utm_source=ig_web_copy_link"><img src="img/banner3.jpg" alt=""></a>
+        </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden"></span>
-    </button>
-  </div>
-  </div> -->
 
-  
+    <div class="navigation">
+      <label class="bar" for="slide1"></label>
+      <label class="bar" for="slide2"></label>
+      <label class="bar" for="slide3"></label>
+    </div>
+  </div>
   <!-- carrossel -->
 
 
@@ -135,7 +121,7 @@
           </p>
         </div>
         <div class="col-md-5">
-          <img src="img/.jpg" width="100%" height="100%"/>
+          <img src="img/grupo.jpg" width="100%" height="100%"/>
         </div>
       </div>
     <!-- nos conheça -->
@@ -160,7 +146,7 @@
                 <img src="img/icon.png" alt="Solaris" width="34" height="34" class="rounded-circle border border-white">
               </li>
               <li class="d-flex align-items-center me-3">
-                <a href="" class="text-white"><i class="bi bi-instagram" width="1em" height="1em"></i></a>
+                <a href="https://www.instagram.com/p/CklwNwWp3ge/" class="text-white"><i class="bi bi-instagram" width="1rem" height="1rem"></i></a>
               </li>
             </ul>
           </div>
@@ -179,7 +165,7 @@
                 <img src="img/icon.png" alt="Solaris" width="32" height="32" class="rounded-circle border border-white">
               </li>
               <li class="d-flex align-items-center me-3">
-                <a href="https://www.instagram.com/p/CiAq11pOYGd/?utm_source=ig_web_copy_link" class="text-white"><i class="bi bi-instagram" width="1em" height="1em"></i></a>
+                <a href="https://www.instagram.com/p/CiAq11pOYGd/?utm_source=ig_web_copy_link" class="text-white"><i class="bi bi-instagram" width="1rem" height="1rem"></i></a>
               </li>
             </ul>
           </div>
@@ -198,7 +184,7 @@
                 <img src="img/icon.png" alt="Solaris" width="32" height="32" class="rounded-circle border border-white">
               </li>
               <li class="d-flex align-items-center me-3">
-                <a href="#" class="text-white"><i class="bi bi-instagram" width="1em" height="1em"></i></a>
+                <a href="https://www.instagram.com/p/CkrKFkXpIUh/?utm_source=ig_web_copy_link" class="text-white"><i class="bi bi-instagram" width="1rem" height="1rem"></i></a>
               </li>
             </ul>
           </div>
@@ -208,6 +194,20 @@
   </div>
   <!-- cards -->
 
+  <!-- colaboradores -->
+  <div class="colab" id="colaboradores">
+    <h2 class="fw-bold text-center" style="font-size: 40px;">Conheça nossos colaboradores</h2>
+    <h4 class="text-colab"> Buscamos sempre atrair, reter e engajar profissionais talentosos para apoiar nossos negócios. Por isso, estimulamos diferentes formas de aprendizado e desenvolvimento no Solaris e encorajamos você a participar também! Afinal, conhecimento e experiência nunca é demais. 
+    Acreditamos que cada colaborador oferece algo único e celebramos essas diferenças. Quando combinamos nossa diversidade de conhecimentos, experiências, estilos e perfis, o resultado se traduz em excelente performance. A seguir, um grupo de colaboradores.</h4>
+    <div class="conjunto">
+    <div class="logos"><img src="img/ultrafarma.png"></div>
+    <div class="logos"><img src="img/nivea.png"></div>
+    <div class="logos"><img src="img/neutrogena.png"></div>
+    </div>
+	<!--<div class="colabtn"><button name="submit" class="form-btn" type="submit">Quero me tornar um colaborador</button></div>-->
+  </div>
+  <!-- colaboradores -->
+  
   <!-- contato -->
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">

@@ -1,4 +1,4 @@
-
+<?php include('../php/connect.php'); if ($_SESSION['level'] == 2) { ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,9 +28,9 @@
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                   <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
-                  <li class="nav-item"><a href="../home-log.php #sobre " class="nav-link">Sobre nós</a></li>
-                  <li class="nav-item"><a href="../home-log.php #colaboradores" class="nav-link">Colaboradores</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+                  <li class="nav-item"><a href="../home-log.php#sobre" class="nav-link">Sobre nós</a></li>
+                  <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
+                  <li class="nav-item"><a href="../artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
                   <li class="nav-item"><a href="../calendario/index.php" class="nav-link">Agenda</a></li>
                   <li class="nav-item"><a href="index.php" class="nav-link">Admin</a></li>
                 </ul>
@@ -66,37 +66,37 @@
 			</div>
 		</div>
 	</div>
-        <?php include '../php/connect.php';
+	<?php 
 
-      $search =  "SELECT *
-                  FROM tb_user
-                  WHERE nr_nivel = 1";
-      $result = $mysqli->query($search);
+$search =  "SELECT *
+            FROM tb_user
+            WHERE nr_nivel = 1";
+$result = $mysqli->query($search);
 
-      while ($row = $result -> fetch_object()) {
-          echo "
-          <div class='arrumar2'>
-              <div class='row'>
-                  <div class='col-3'>
-                      <span>$row->ds_username</span>
-                  </div>	
-                  <div class='col-1'>
-                  </div>
-                  <div class='col-4'>
-                      <span>$row->ds_email</span>
-                  </div>
-              
-                  <div class='col-1'>
-                      <button><a href='../php/delete-user.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/excluir.png' alt='Deletar registro'></a></button>
-                  </div>
-                  <div class='col-1'>
-                      <button><a href='tag-users.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/editar.png' alt='Alterar registro'></a></button>
-                  </div>
-              </div>
-          </div>
-          ";				
-      }
-      ?> 
+while ($row = $result -> fetch_object()) {
+    echo "
+    <div class='arrumar2'>
+        <div class='row'>
+            <div class='col-3'>
+                <span>$row->ds_username</span>
+            </div>	
+            <div class='col-1'>
+            </div>
+            <div class='col-4'>
+                <span>$row->ds_email</span>
+            </div>
+        
+            <div class='col-1'>
+                <button><a href='../php/delete-user.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/excluir.png' alt='Deletar registro'></a></button>
+            </div>
+            <div class='col-1'>
+                <button><a href='tag-users.php?user=$row->cd_user'><img style='width: 20px; height: 20px;' src='../img/editar.png' alt='Alterar registro'></a></button>
+            </div>
+        </div>
+    </div>
+    ";				
+}
+?> 
 </div>
 </main>
 <br>
@@ -106,3 +106,4 @@
 
 </body>
 </html>
+<?php } else { header('Location: ../index.php'); } ?>

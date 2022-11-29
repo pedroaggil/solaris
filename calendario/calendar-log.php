@@ -1,9 +1,10 @@
-<?php include('../php/connect.php'); ?>
+<?php include('../php/connect.php');  
+if(isset($_SESSION['']))?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<title>Solaris</title>
-  <meta charset="utf-8">
+  <meta charset="utf8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="Move">
@@ -29,9 +30,9 @@
           <li class="nav-item"><a href="../home-log.php" class="nav-link">Ínicio</a></li>
           <li class="nav-item"><a href="../home-log.php#sobre" class="nav-link">Sobre nós</a></li>
           <li class="nav-item"><a href="../home-log.php#colaboradores" class="nav-link">Colaboradores</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+          <li class="nav-item"><a href="../artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="index.php" class="nav-link">Agenda</a></li>
-          <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="admin/index.html" class="nav-link">Admin</a></li>'; } ?>
+          <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="../admin/index.php" class="nav-link">Admin</a></li>'; } ?>
         </ul>
 
 
@@ -68,29 +69,25 @@
                     FROM tb_agenda 
                     WHERE st_publica = 1
                     ORDER BY dt_data ASC";
-
+        
         $query = $mysqli->query($search);
 
         $user = $_SESSION['id'];
 
         while ($sql = $query -> fetch_object()) {
           ?>
-              <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                  <img src="..." class="card-img-top">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <?php
-                        echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
-                      ?>
-                    </p>
-                    <button>
-                      <a href="../php/save-lecture.php?event=<?= $sql->cd_agenda; ?>">Salve este evento no perfil</a>
-                    </button>
-                  </div>
-                </div>
+          <div class="card" style="width:20rem; margin-bottom:3rem;">
+              <!-- <img height="10vh" src="../img/verao.jpg" class="card-img-top"> -->
+              <div class="card-body">
+                  <p class="card-text">
+                    <?php
+                      echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
+                    ?>
+                  </p>
+                  <div><a href="../php/save-lecture.php?event=<?= $sql->cd_agenda ?>"><button class="salvar-ev"style="text-decoration:none;">Salve este evento no perfil</button></a></div>    
               </div>
-            <?php
+          </div>
+          <?php
         }
       
       ?>
@@ -101,9 +98,8 @@
   	<h4>Agende um evento você mesmo</h4>
   	
   	<hr class="divider">
-        <h5 class="agende"><i class="bi bi-pencil-square"></i>Palestras gratuitas<button><a href="calendario.php" class="agendar text-decoration-none text-white">Agendar</a></button></h5>
-        <h5 class="agende"><i class="bi bi-pencil-square"></i>Stand para eventos<button><a href="calendario.php" class="agendar text-decoration-none text-white">Agendar</a></button></h5>   
-  	<hr class="divider">
+        <h5 class="agende"><i class="bi bi-pencil-square"></i>Palestras gratuitas<button><a href="calendario.php" class="text-decoration-none text-white">Agendar</a></button></h5>
+    <hr class="divider">
   </div>
   <!-- públicos -->
 
@@ -125,5 +121,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-</body>
+<script src="../js/carousel.js"></script>
+  </body>
 </html>
