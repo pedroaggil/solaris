@@ -1,0 +1,287 @@
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+  @media (min-width: 1rem) {
+
+.carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+
+  }
+
+.featurette-heading {
+    font-size: 50px;
+
+  }
+}
+
+@media (min-width: 1em) {
+  .featurette-heading {
+    margin-top: 3rem;
+
+  }
+}
+
+.sub {
+  font-size: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 18px;
+
+}
+
+body, html{
+  margin: 0;
+  width:100%;
+  height: 100%;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+header .nav-item{
+  font-size: 18px;
+  margin-top: 1.6rem;
+}
+
+header .nav-link {
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #000;
+  border-bottom: solid 4px transparent;
+}
+
+header .nav-link:hover {
+  border-bottom: solid 4px #F2955E;
+  color: #F2955E;
+
+}
+
+.navbar-brand {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+
+}
+
+.dropdown {
+  margin-top: 1rem;
+
+}
+
+.dropdown-item:hover {
+  background: #ffff;
+  color: #F2955E;
+}
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  border-style: #F2955E;
+
+}
+
+.card-img-hover{
+  transition: 0.3s all ease-out;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  top:0;
+
+}
+
+.card:hover{
+  transform: scale(1.1, 1.1);
+
+}
+
+.card:hover .card-img-hover{
+  height: 100%;
+  opacity: 1;
+
+
+}
+
+.content{
+	height:512px;
+	width:1300px;
+	border-radius: 25px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 5%;
+	left: 50%; 
+	transform: translate(-50%, -5%);
+}
+
+.navigation{
+	position: absolute;
+	bottom: 20px; 
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+}
+
+.bar{
+	width: 70px;
+	height: 20px;
+	border: 2px solid#fff;
+	border-radius: 20px;
+	margin: 2px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.bar:hover{
+	background-color: #fff;
+
+}
+
+input{
+	display: none;
+}
+
+.slides{
+	width: 100%;
+	display: flex;
+}
+.slide{
+	width: 100%;
+	transition: 0.6s;
+}
+
+.slide img{
+	width:100%
+	height: 100%;
+}
+
+#slide1:checked ~ .s1{
+	margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+	margin-left: -100%;
+}
+
+#slide3:checked ~ .s1{
+	margin-left: -200%;
+}
+
+
+a .logo {
+  display: block;
+}
+
+.marketing .col-lg-4 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+
+}
+
+.marketing .col-lg-4 h2 {
+  margin-top: .75rem;
+
+}
+
+.divider {
+  margin-top: 4rem;
+}
+
+.espaço {
+  margin: 3rem;
+
+}
+
+.espaço1 {
+  margin: 4rem;
+
+}
+
+.espaço2 {
+  margin: 6.5rem;
+}
+
+.colab {
+  height: 35rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 4rem;
+  background-color: #F2E3D4;
+}
+
+.enviar {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 50px;
+  background-color: #F2955E;
+  border-radius: 25px;
+  border-style: none;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button:hover {
+  background-color: darkgrey;
+
+}
+
+.colabtn{
+  display: flex;
+  margin: 20rem 5rem 2rem 43rem;
+}
+
+.logos{
+  display:inline;
+  margin-left:2rem;
+  max-width:100px;
+  min-width:200px;
+}
+
+.conjunto{
+  margin-top:5rem;
+  margin-left:32rem;
+}
+
+.text-colab{
+  margin-top:2rem;
+  text-align:center;
+  font-size:18px;
+  font-weight:500;

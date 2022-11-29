@@ -73,13 +73,6 @@
 			<input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" required="">
 		</div>
 		</div>
-
-		<div class="form-group">
-		<label for="titulo" class="col-sm-2 control-label">Título do evento</label>
-		<div class="col-sm-10">
-			<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Título" required="">
-		</div>
-		</div>
 		
         <div class="form-group">
 		<label for="email" class="col-sm-2 control-label">E-mail</label>
@@ -99,27 +92,6 @@
 		<label for="cidade" class="col-sm-2 control-label">Cidade</label>
 		<div class="col-sm-10">
 			<input type="text" name="cidade" class="form-control" id="cidade" placeholder="Cidade" required>
-		</div>
-		</div>
-
-		<div class="form-group">
-		<label for="tema" class="col-sm-2 control-label">Temática</label>
-		<div class="col-sm-10">
-			<input type="text" name="tema" class="form-control" id="tema" placeholder="Temática" required="">
-		</div>
-		</div>
-
-		<div class="form-group">
-		<label for="descricao" class="col-sm-2 control-label">Descrição</label>
-		<div class="col-sm-10">
-			<textarea name="descricao" id="descricao" rows="10"></textarea>
-		</div>
-		</div>
-
-		<div class="form-group">
-		<label for="palestrante" class="col-sm-2 control-label">Palestrante</label>
-		<div class="col-sm-10">
-			<input type="text" name="palestrante" class="form-control" id="palestrante" placeholder="Palestrante" required="">
 		</div>
 		</div>
 

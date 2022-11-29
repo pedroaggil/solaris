@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@media (min-width: 1rem) {
+    *,
+    *::before,
+    *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body,
+    input {
+        font-family: "Poppins", sans-serif;
+    }
+    main {
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        background-color: #F2E3D4;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box {
+        position: relative;
+        width: 100%;
+        max-width: 750px;
+        height: 450px;
+        background-color: #fff;
+        border-radius: 3.3rem;
+        box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+    }
+    form {
+        max-width: 500px;
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        transition: opacity 0.02s 0.4s;
+    }
+    h3 {
+        margin: 2.3rem;
+        font-size: 2.1rem;
+        font-weight: 600;
+        color: #151111;
+    }
+    .container {
+        margin: 3rem 0 1rem 2rem;
+    }
+}
+
+h4 {
+    font-size: 20px;
+    margin: 0 3rem 0 2rem;
+}
+
+.input1 {
+    border: 1px gray;
+    border-radius: 3rem;
+    margin-right: 8rem;
+    margin-bottom: 1rem;
+    width: 200px;
+    float: left;
+}
+
+.input2 {
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    width: 400px;
+    float: left;
+}
+
+#palestrante {
+    float: none;
+    margin-left: 2rem;
+}
+
+#medico {
+    float: none;
+    margin-left: 2rem;
+}
+
+#especialista {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    float: none;
+}
+
+.arrumar {
+    margin-left: 30px;
+}
+
+button {
+    float: left;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    width: 80px;
+    height: 35px;
+    background-color: #F2955E;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+button:hover {
+    background-color: darkgrey;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.text a:hover {
+    color: #ad3d1e;
+}
+
+.titulo {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}

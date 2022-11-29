@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@media (min-width: 1rem) {
+
+body, html{
+  margin: 0;
+  width:100%;
+  height: 100%;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+header .nav-item{
+  font-size: 18px;
+  margin-top: 1.6rem;
+}
+
+header .nav-link {
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #000;
+  border-bottom: solid 4px transparent;
+}
+
+header .nav-link:hover {
+  border-bottom: solid 4px #F2955E;
+  color: #F2955E;
+
+}
+
+.navbar-brand {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+
+}
+
+.dropdown {
+  margin-top: 1rem;
+
+}
+
+.dropdown-item:hover {
+  background: #ffff;
+  color: #F2955E;
+
+}
+
+.main{
+  margin-left: 45rem;
+  margin-top: 5rem;
+  border-radius: 25px;
+  background-color: #F2955E;
+  max-width: 400px;
+  height: 550px;
+  font-size: 16px;
+
+}
+
+.valor{
+  border-radius: 10px; 
+  margin-bottom: 0.5rem;
+  margin-left: 2.5rem;
+  height: 40px; 
+  width: 300px; 
+  border: 2px solid #F2955E; 
+  padding-left:1rem;
+
+}
+  
+  .valor2{
+  margin-bottom: 0.5rem;
+  margin-left: 2.5rem;
+  height: 40px; 
+  width: 300px; 
+  border: 2px solid #F2955E; 
+ 
+
+}
+
+
+button{
+  float: left;
+  margin-top: 1rem;
+  margin-bottom: 60px;
+  margin-left: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  width: 115px;
+  height: 45px;
+  text-decoration:none;
+  background-color: rgb(70, 65, 65) ;
+  border-radius: 20px;
+  border-style:none;
+  font-size: 17px;
+  color: white;
+  line-height: 1.2;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button:hover {
+  background-color: rgb(70, 65, 65);
+
+}
+
+.user{
+  margin-left:2.8rem;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 3rem;
+  color: rgb(70, 65, 65);
+}
+
+.tag{
+  margin-left: 2.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: rgb(70, 65, 65);
+  color: white;
+  width: 130px;
+  border-radius: 20px;
+  padding: 0.1rem;
+  text-align: center;
+}
+
+.title{
+  position: absolute;
+  top: 25%;
+  width: 800px;
+  height: 400px;
+  margin-left: 40rem;
+}

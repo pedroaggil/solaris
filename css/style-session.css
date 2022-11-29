@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@media (min-width: 1rem) {}
+    body, html{
+    margin: 0;
+    width:100%;
+    height: 100%;
+    padding: 0;
+    background-color: #F2E3D4;
+    font-family: 'Poppins', sans-serif;		
+      
+    }
+ 	header{
+    background-color:#fff;
+    height:130px;
+	}
+
+	header .nav-item{
+    font-size: 18px;
+    margin-top: 1.6rem;
+	}
+
+	header .nav-link {
+    font-weight: 600;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #000;
+    border-bottom: solid 4px transparent;
+	}
+
+	header .nav-link:hover {
+    border-bottom: solid 4px #F2955E;
+    color: #F2955E;
+
+	}
+
+  .navbar-brand {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   margin-right: 4rem;
+
+  }
+
+  .dropdown {
+   margin-top: 1rem;
+
+  }
+
+  .dropdown-item:hover {
+   background: #ffff;
+   color: #F2955E;
+  }
+    main {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #F2E3D4;
+    display: flex;
+    margin-top:10rem;
+    justify-content: center;
+    }
+
+  	.tel{
+  	font-weight:bold
+    
+	}
+
+    .box {
+     position: relative;
+     width: 100%;
+     max-width: 600px;
+     height: 520px;
+     background-color: #fff;
+     border-radius: 3.3rem;
+     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+    }
+
+    form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    transition: opacity 0.02s 0.4s;
+    }
+
+    h3 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom:2rem;
+    font-size: 26px;
+    font-weight: 600;
+    color: #151111;
+    }
+
+    span{
+    text-align:center;
+    margin-left:6.5rem;
+    font-size:1rem;
+	}
+	
+  .infos{
+   text-align: center;
+   margin-top:1.5rem;
+   padding: 15px;
+   
+  }
+
+  button {
+  margin-left: 13.5rem;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  width: 160px;
+  height: 40px;
+  background-color: #F2955E;
+  border-radius: 20px;
+  border-style: none;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+  button:hover {
+  background-color: darkgrey;
+}
+
+a {
+  text-decoration:none;
+  color: white;
+}
+  

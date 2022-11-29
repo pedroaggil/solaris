@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@media (min-width: 1rem) {
+
+body,
+input {
+    font-family: "Poppins", sans-serif;
+    size: 100%;
+    background-color: #F2E3D4;
+}
+
+.box {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+
+}
+
+.inner-box {
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #F2E3D4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.logo img {
+    width: 60px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #151111;
+    text-align:center;
+}
+
+ h6 {
+    color: #151111;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align:center;
+}
+
+p {  
+    font-size: 18px;
+    text-align:center;
+
+}
+
+.espaço{
+    margin: 3.5rem;
+
+}
+
+.enviar { 
+    display: block;
+    margin: 0px auto;
+
+}
+
+.enviar button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 50px;
+  background-color: #F2955E;
+  border-radius: 25px;
+  border-style: none;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+}
+
+.enviar button:hover {
+  background-color: darkgrey;
+
+}
+

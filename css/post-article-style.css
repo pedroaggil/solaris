@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@media (min-width: 1rem) {}
+
+body {
+    background-color: #F2E3D4;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    margin-top: 3.5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+    background-color: #F2E3D4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 650px;
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    color: #151111;
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+  	font-weight: bold;
+  	margin-bottom: 0.75rem;
+    
+}
+
+.container {
+    text-align: center;
+    margin-left: 110px;
+}
+
+.input1 {
+    padding: 0.75rem;
+  	padding-left:1rem;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid #F2955E;
+    border-radius: 10px;
+    margin-right: 470px;
+    margin-left: 30px;
+    margin-bottom: 3rem;
+    width: 500px;
+}
+
+.tips {
+    text-align: left;
+    width: 200px;
+    margin-top: 2rem;
+    margin-left: 30px;
+    margin-right: 200px;
+    margin-bottom: 2rem;
+}
+
+.up {
+    margin-left: 30px;
+    width: 100px;
+}
+
+button {
+    margin-bottom: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    width: 150px;
+    height: 40px;
+    background-color: #F2955E;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+
+button:hover {
+    background-color: darkgrey;
+}
+
+header {
+    background-color: #fff;
+}
+
+header .nav-item {
+    font-size: 18px;
+    margin-top: 1.6rem;
+}
+
+header .nav-link {
+    font-weight: 600;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #000;
+    border-bottom: solid 4px transparent;
+}
+
+header .nav-link:hover {
+    border-bottom: solid 4px #F2955E;
+    color: #F2955E;
+}
+
+.navbar-brand {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 4rem;
+}
+
+.dropdown {
+    margin-top: 1rem;
+}
+
+.dropdown-item:hover {
+    background: #ffff;
+    color: #F2955E;
+}
+
+a {
+    text-decoration: none;
+}
+
+.negrito {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+

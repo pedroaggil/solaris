@@ -35,9 +35,8 @@
             echo "Possível ataque de upload de arquivo!\n";
         }
         
-        $autor = $_POST['autor'];
 
-        $insert = "INSERT INTO tb_artigos (id_user, ds_conteudo, nm_titulo, ds_tag, nm_autor) VALUES ('".$_SESSION['id']."', '".$uploadfile."', '".$_SESSION['titulo']."',  '".$_SESSION['tag']."', '".$autor."')";
+        $insert = "INSERT INTO tb_artigos (id_user, ds_conteudo, nm_titulo, ds_tag) VALUES ('".$_SESSION['id']."', '".$uploadfile."', '".$_SESSION['titulo']."',  '".$_SESSION['tag']."')";
         if($mysqli->query($insert)){
             echo 'enviado';
         }else{ 
