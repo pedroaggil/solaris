@@ -1,4 +1,4 @@
-CREATE DATABASE db_solaris; 
+CREATE DATABASE db_solaris DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE db_solaris;
 
 CREATE TABLE tb_user(
@@ -7,13 +7,11 @@ CREATE TABLE tb_user(
 	ds_username VARCHAR(80) NOT NULL,
 	nr_nivel INT(1) NOT NULL,
 	ds_senha VARCHAR(100) NOT NULL,
-	img_perfil BLOB,
 	ds_tag VARCHAR(20)
 );
 
 CREATE TABLE tb_agenda(
 	cd_agenda INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	nm_titulo VARCHAR (100) NOT NULL,
 	ds_email VARCHAR(100) NOT NULL,
 	nr_tel VARCHAR(15) NOT NULL,
 	hr_hora TIME,
@@ -24,7 +22,10 @@ CREATE TABLE tb_agenda(
 	st_publica INT,
 	st_aprovada INT,
 	id_salvar INT,
-    id_user INT
+    id_user INT,
+	nm_tema VARCHAR (100) NOT NULL,
+	ds_descricao VARCHAR(300),
+	nm_palestrante VARCHAR(100)
 );
 
 CREATE TABLE tb_agenda_user(

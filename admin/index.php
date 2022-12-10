@@ -76,15 +76,15 @@
                 <div class="col-2 " >
                    <button class="btn3"><a href="../palestras/solicitacao-p-adm.php" class="text-white">Solicitações de palestras</a></button>
                 </div>
-                <!--<div class="col-2">
+                <div class="col-2">
                     <button> <a href="#" class="text-white">Palestras públicas</a></button>
                 </div>
-                <div class="col-2">-->
+                <div class="col-2">
                     <button class="btn2"> <a href="../palestras/agendar-p-adm.php" class="text-white">Agendar palestra pública</a></button>
                 </div>
-                <!--<div class="col-2">
-                    <button> <a href="#" class="text-white">Novo colaborador</a></button>
-                </div>-->
+                <div class="col-2">
+                    <button> <a href="../colab/colab-control.php" class="text-white">Colaboradores</a></button>
+                </div>
             </div>
             </div>
     </div>

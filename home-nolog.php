@@ -22,24 +22,28 @@
 
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-      <a class="navbar-brand" href="home-nolog.php">
+      <a class="navbar-brand" href="home-log.php">
         <img src="img/logo.png"/>
       </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="home-nolog.php" class="nav-link">Ínicio</a></li>
+          <li class="nav-item"><a href="home-log.php" class="nav-link">Ínicio</a></li>
           <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
           <li class="nav-item"><a href="#colaboradores" class="nav-link">Colaboradores</a></li>
           <li class="nav-item"><a href="artigos/exibir_artigos.php" class="nav-link">Artigos</a></li>
           <li class="nav-item"><a href="calendario/index.php" class="nav-link">Agenda</a></li>
+          <?php if ($_SESSION['level'] == 2) { echo '<li class="nav-item"><a href="admin/index.php" class="nav-link">Admin</a></li>'; } ?>
         </ul>
+
 
         <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="img/user.png"/>
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" name="outin" id="outin" href="login/index.html">Entrar</a></li>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="perfil/profile.php">Meu perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" name="outin" id="outin" href="php/logout.php">Sair</a></li>
           </ul>
         </div>
       </div>
@@ -48,7 +52,7 @@
   <!-- navbar -->
 
   <!-- carrossel -->
-  	<div class="content">
+	<div class="content">
     <div class="slides">
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
@@ -59,11 +63,11 @@
         </div>
 
         <div class="slide">
-        <img src="img/banner2.jpg" alt="">
+          <img src="img/banner2.jpg" alt="">
         </div>
 
         <div class="slide">
-          <a href="https://www.instagram.com/p/CklwNwWp3ge/?utm_source=ig_web_copy_link" class="text-white"><img src="img/banner3.jpg" alt=""></a>
+          <a href="https://www.instagram.com/p/CklwNwWp3ge/?utm_source=ig_web_copy_link"><img src="img/banner3.jpg" alt=""></a>
         </div>
     </div>
 
@@ -76,7 +80,7 @@
   <!-- carrossel -->
 
 
-  <!-- icons -->
+   <!-- icons -->
   <div class="container marketing">
     <div class="row">
       <div class="col-lg-4">
@@ -99,32 +103,7 @@
       </div>
     </div>
    <!--  icons -->
-
     <hr class="divider">
-
-    <div class="espaço1"></div>
-
-    <!-- nos conheça -->
-    <div class="row featurette" id="sobre">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-bold" style="font-size: 48px;"><a class="logo"><img src="img/s.png"/></a>&nbsp;Conheça mais sobre nós</h2>
-          <h3 class="sub"><span class="text-muted">Entenda qual o motivo do projeto Solaris</span></h3>
-          <p class="lead">Nossa maior motivação para criá-lo foi a consciência de que boa parte da população, que está cotidianamente exposta ao sol, não possui conhecimento acerca do câncer de pele e nem como evitá-lo, contribuindo para o aumento do índice anual no país.
-          <br><br>
-          Sendo assim, nosso objetivo principal é promover o tema e torná-lo conhecido, quebrando os "tabus" a respeito do câncer. Para além, esperamos que vínculos sejam estabelecidos entre os que desejam compartilhar suas histórias e os que buscam entender mais sobre o câncer de pele!
-          </p>
-        </div>
-        <div class="col-md-5">
-          <img src="img/grupo.jpg" width="100%" height="100%"/>
-        </div>
-      </div>
-    <!-- nos conheça -->
-    <hr class="divider">
-    </div>
-    <!-- icons -->
-
-    <div class="espaço"></div>
-
     <!-- cards -->
     <div class="container px-4 py-5" id="custom-cards">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
@@ -187,21 +166,40 @@
     </div>
   </div>
   <!-- cards -->
-
-<!-- colaboradores -->
+	<div class="espaço1"></div>
+	<hr class="divider">
+    <!-- nos conheça -->
+    <div class="row featurette" id="sobre">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-bold" style="font-size: 48px;"><a class="logo"><img src="img/s.png"/></a>&nbsp;Conheça mais sobre nós</h2>
+          <h3 class="sub"><span class="text-muted">Entenda qual o motivo do projeto Solaris</span></h3>
+          <p class="lead">Nossa maior motivação para criá-lo foi a consciência de que boa parte da população, que está cotidianamente exposta ao sol, não possui conhecimento acerca do câncer de pele e nem como evitá-lo, contribuindo para o aumento do índice anual no país.
+          <br><br>
+          Sendo assim, nosso objetivo principal é promover o tema e torná-lo conhecido, quebrando os "tabus" a respeito do câncer. Para além, esperamos que vínculos sejam estabelecidos entre os que desejam compartilhar suas histórias e os que buscam entender mais sobre o câncer de pele!
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/grupo.jpg" width="100%" height="100%"/>
+        </div>
+      </div>
+    <!-- nos conheça -->
+    <hr class="divider">
+    </div>
+    <div class="espaço"></div>
+  	
+  <!-- colaboradores -->
   <div class="colab" id="colaboradores">
     <h2 class="fw-bold text-center" style="font-size: 40px;">Conheça nossos colaboradores</h2>
     <h4 class="text-colab"> Buscamos sempre atrair, reter e engajar profissionais talentosos para apoiar nossos negócios. Por isso, estimulamos diferentes formas de aprendizado e desenvolvimento no Solaris e encorajamos você a participar também! Afinal, conhecimento e experiência nunca é demais. 
     Acreditamos que cada colaborador oferece algo único e celebramos essas diferenças. Quando combinamos nossa diversidade de conhecimentos, experiências, estilos e perfis, o resultado se traduz em excelente performance. A seguir, um grupo de colaboradores.</h4>
     <div class="conjunto">
-    <div class="logos"><img src="img/ultrafarma.png"></div>
-    <div class="logos"><img src="img/nivea.png"></div>
-    <div class="logos"><img src="img/neutrogena.png"></div>
+    
     </div>
 	<!--<div class="colabtn"><button name="submit" class="form-btn" type="submit">Quero me tornar um colaborador</button></div>-->
   </div>
+  <hr class="divider2">
   <!-- colaboradores -->
-
+  
   <!-- contato -->
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
@@ -210,7 +208,7 @@
         <h1 class="display-4 fw-bold lh-1 mb-3" style="font-size: 50px;">Entre em contato conosco</h1>
         <p class="col-lg-10 fs-4">Tem alguma dúvida ou deseja participar do projeto? Nos mande uma mensagem através do formulário ao lado ou acesse nossas redes!</p>
         <a class="text-muted" href="https://instagram.com/solarisccp?igshid=YmMyMTA2M2Y="><img src="img/insta.png" style="width: 50px; height: 50px; margin:1rem 1rem 0 0;"></a>
-        <a class="text-muted" href="#"><img src="img/git.png" style="width: 50px; height: 50px; margin-top: 1rem;"></a>
+        <a class="text-muted" href="github.com/pedroaggil/solaris"><img src="img/git.png" style="width: 50px; height: 50px; margin-top: 1rem;"></a>
       </div>
       <div class="col-md-10 mx-auto col-lg-5">
         <form class="p-4 p-md-5 border rounded-3 bg-light">
@@ -226,7 +224,7 @@
             <textarea placeholder="Escreva sua mensagem" class="form-control" rows="4" cols="50"></textarea>
             <label for="floatingText">Mensagem</label>
           </div>
-          <hr class="my-4 align-items-center">
+          <hr class="my-4">
           <div class="enviar"><button name="submit" class="w-100 form-btn" type="submit">Enviar</button></div>
         </form>
       </div>

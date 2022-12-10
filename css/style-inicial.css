@@ -200,7 +200,12 @@ a .logo {
 }
 
 .divider {
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+.divider2 {
+  margin-top: 3rem;
+  margin-right:18rem;
+  margin-left:18rem;
 }
 
 .espaço {
@@ -218,6 +223,9 @@ a .logo {
 }
 
 .colab {
+  margin-right:18rem;
+  margin-left:18rem;
+  border-radius:25px;
   height: 35rem;
   margin-top: 4rem;
   margin-bottom: 4rem;

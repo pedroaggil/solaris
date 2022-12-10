@@ -13,9 +13,9 @@
 <link rel="stylesheet" type="text/css" href="css/style-inicial.css">
 <script src="https://kit.fontawesome.com/235f508f3b.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="../css/colab-adm.css"/>
+<link rel="stylesheet" href="../css/form-colab.css"/>
 <link rel="icon" type="imagem/png" href="../img/icon.png " />
-<title>Administração Solaris</title>
+<title> Formulário de colaborador</title>
 </head>
     <body>
           <!-- Navbar -->
@@ -53,7 +53,7 @@
     <main>
     <div class="box">
       <form method="post" action="../php/create-colab.php"></form>
-        <h3>Novo colaborador</h3>
+        <h3>Torne-se um colaborador</h3>
         <div class="container"> 
             <div class="input1" style="display: inline-block;">
               <input class="i1" name="name" placeholder="Empresa"></input>
@@ -69,15 +69,27 @@
             <br>
             <!-- <input type="file" name="image"> -->
         </div>
-        <div class="tag">
-            <h6>Tipo de colaborador</h6>
-            <input type='radio' value='Financeiro' name='tag' id='financeiro'> Financeiro
-            <input type='radio' value='Físico' name='tag' id='fisico'> Físico
-            <input type='radio' value='Didático' name='tag' id='didatico'> Didático
+        <div class="conta" style='margin-right:0px;'>
+            <h6 style='font-size: 20px;'>Tipo de colaborador</h6>
+            <input type='radio' value='Financeiro' name='type__type' id='financeiro'> Financeiro
+          <br>
+            <input type='radio' value='Físico' name='type__type' id='fisico'> Físico
+          <br>
+            <input type='radio' value='Didático' name='type__type' id='didatico'> Didático
+          
+       
+        </div>  
+        <div class="input3" style='margin-right: 0px;'>
+              <input class="i5" name="cnpj__crm" placeholder="CNPJ ou CRM"></input>
+              <span></span>
+              <input class="i6" name="cpf" placeholder="CPF do Representante"></input>
         </div>
-            <br><br>
+     
+           
 
             <button type='submit'>Salvar</button>
+
+      </form>
                         
     </div>
     </main>

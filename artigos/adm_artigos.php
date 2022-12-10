@@ -1,4 +1,4 @@
-<?php include('../php/connect.php'); ?>
+<?php include('../php/connect.php'); if($_SESSION['id'] = 2){ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,9 +89,18 @@ if (isset($filtro)) {
                         </div>
                        	<input type="submit" value="Ler artigo" class="ler">
                 </form>
+  				<?php if($_SESSION['id'] = 2){?>
+  				<form method="post" action="ler_artigo.php">
+                  <input type="hidden" name="codigo" readonly value="<?php echo $linha->cd_artigo;?>">
+                  <input type="submit" value="Excluir Artigo" class="ler">
+                </form>
+  				<form method="post" action="ler_artigo.php">
+                  <input type="hidden" name="codigo" readonly value="<?php echo $linha->cd_artigo;?>">
+                  <input type="submit" value="Editar Artigo" class="ler">
+                </form>
   				<hr class="divider">
-  
-    <?php unset($filtro); }}else{ echo 'não tem artigos';}}else{ $search =  "SELECT * FROM tb_artigos";
+  				<?php } ?>
+    <?php  unset($filtro); } } else { echo 'não tem artigos';}}else{ $search =  "SELECT * FROM tb_artigos";
 
         if($sql = $mysqli->query($search)){
 
@@ -106,10 +115,20 @@ if (isset($filtro)) {
                         </div>
                     	<input type="submit" value="Ler artigo" class="ler">
                 </form>
+    				<?php if($_SESSION['id'] = 2){?>
+  				<form method="post" action="exc_artigo.php">
+                  <input type="hidden" name="codigo" readonly value="<?php echo $linha->cd_artigo;?>">
+                  <input type="submit" value="Excluir Artigos" class="ler">
+                </form>
+  				<form method="post" action="edit_artigo.php">
+                  <input type="hidden" name="codigo" readonly value="<?php echo $linha->cd_artigo;?>">
+                  <input type="submit" value="Editar Artigo" class="ler">
+                </form>
+  				<?php } ?>
  				<hr class="divider">
 
             
-    <?php } }else { echo 'não tem artigos';}}?>
+    <?php } } else { echo 'não tem artigos';} } }else{ echo'you no es adm manito';}?>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>

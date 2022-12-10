@@ -107,30 +107,6 @@
     </div>
    <!--  icons -->
     <hr class="divider">
-
-    <div class="espaço1"></div>
-
-    <!-- nos conheça -->
-    <div class="row featurette" id="sobre">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-bold" style="font-size: 48px;"><a class="logo"><img src="img/s.png"/></a>&nbsp;Conheça mais sobre nós</h2>
-          <h3 class="sub"><span class="text-muted">Entenda qual o motivo do projeto Solaris</span></h3>
-          <p class="lead">Nossa maior motivação para criá-lo foi a consciência de que boa parte da população, que está cotidianamente exposta ao sol, não possui conhecimento acerca do câncer de pele e nem como evitá-lo, contribuindo para o aumento do índice anual no país.
-          <br><br>
-          Sendo assim, nosso objetivo principal é promover o tema e torná-lo conhecido, quebrando os "tabus" a respeito do câncer. Para além, esperamos que vínculos sejam estabelecidos entre os que desejam compartilhar suas histórias e os que buscam entender mais sobre o câncer de pele!
-          </p>
-        </div>
-        <div class="col-md-5">
-          <img src="img/grupo.jpg" width="100%" height="100%"/>
-        </div>
-      </div>
-    <!-- nos conheça -->
-    <hr class="divider">
-    </div>
-    <!-- icons -->
-
-    <div class="espaço"></div>
-
     <!-- cards -->
     <div class="container px-4 py-5" id="custom-cards">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
@@ -193,19 +169,38 @@
     </div>
   </div>
   <!-- cards -->
-
+	<div class="espaço1"></div>
+	<hr class="divider">
+    <!-- nos conheça -->
+    <div class="row featurette" id="sobre">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-bold" style="font-size: 48px;"><a class="logo"><img src="img/s.png"/></a>&nbsp;Conheça mais sobre nós</h2>
+          <h3 class="sub"><span class="text-muted">Entenda qual o motivo do projeto Solaris</span></h3>
+          <p class="lead">Nossa maior motivação para criá-lo foi a consciência de que boa parte da população, que está cotidianamente exposta ao sol, não possui conhecimento acerca do câncer de pele e nem como evitá-lo, contribuindo para o aumento do índice anual no país.
+          <br><br>
+          Sendo assim, nosso objetivo principal é promover o tema e torná-lo conhecido, quebrando os "tabus" a respeito do câncer. Para além, esperamos que vínculos sejam estabelecidos entre os que desejam compartilhar suas histórias e os que buscam entender mais sobre o câncer de pele!
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/grupo.jpg" width="100%" height="100%"/>
+        </div>
+      </div>
+    <!-- nos conheça -->
+    <hr class="divider">
+    </div>
+    <div class="espaço"></div>
+  	
   <!-- colaboradores -->
   <div class="colab" id="colaboradores">
     <h2 class="fw-bold text-center" style="font-size: 40px;">Conheça nossos colaboradores</h2>
     <h4 class="text-colab"> Buscamos sempre atrair, reter e engajar profissionais talentosos para apoiar nossos negócios. Por isso, estimulamos diferentes formas de aprendizado e desenvolvimento no Solaris e encorajamos você a participar também! Afinal, conhecimento e experiência nunca é demais. 
     Acreditamos que cada colaborador oferece algo único e celebramos essas diferenças. Quando combinamos nossa diversidade de conhecimentos, experiências, estilos e perfis, o resultado se traduz em excelente performance. A seguir, um grupo de colaboradores.</h4>
     <div class="conjunto">
-    <div class="logos"><img src="img/ultrafarma.png"></div>
-    <div class="logos"><img src="img/nivea.png"></div>
-    <div class="logos"><img src="img/neutrogena.png"></div>
+    
     </div>
 	<!--<div class="colabtn"><button name="submit" class="form-btn" type="submit">Quero me tornar um colaborador</button></div>-->
   </div>
+  <hr class="divider2">
   <!-- colaboradores -->
   
   <!-- contato -->

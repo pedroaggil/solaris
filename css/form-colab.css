@@ -1,21 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-@media (min-width: 1em) {
+@media (min-width: 1rem) {}
 
 body{
     background-color: #F2E3D4;
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    margin-top: 3.5rem;
-    margin-bottom: 5rem;
-    text-align: center;
-}
+
 
 main {
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     overflow: hidden;
     background-color: #F2E3D4;
     margin: 0;
@@ -26,43 +22,92 @@ main {
 }
 
 .box{
+    margin-top: 3vh;
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 700px;
+    width: 80%;
+    max-width: 800px;
+    min-height: 600px;
+    height: auto;
     background-color: #fff;
     border-radius: 3rem;
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
+h3{
+font-size: 30px;
+font-weight: 600;
+margin-top: 5rem;
+margin-bottom: 3rem;
+color: #151111;
+text-align:center;
+}
+
 .container{
-    margin-bottom: 200px;
-    margin: 0 190px;
     text-align: center;
+    margin-left: 110px;
 }
 .row{
     text-align: center;
-    margin: 30px;
+    margin: 2rem 0 0 0;
 } 
    
 
-.col-3{
-    margin: 20px;
-    padding: 0px 20px;
-    background-color: aquamarine; 
-    border-color: #fff ;
-    border: 10px;
+.container{
+margin:0px;
+margin-bottom: 30px;
+}
+.i1{
+  border-radius:10px;
+  margin-right: 10px;
+  margin-bottom:10px;
+  padding:5px;
+  width: 300px;
 }
 
-.logo img {
-    width: 70px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 7rem;
+.i2{
+  border-radius:10px;
+   padding:5px;
+   width: 350px;
+}
+.i3{
+  border-radius:10px;
+    margin-right: 10px;
+   margin-bottom:10px;
+   padding:5px;
+   width: 400px;
+}
+.i4{
+  border-radius:10px;
+   padding:5px;
+   width: 250px;
+}
+.i5{
+  border-radius:10px;
+    margin-bottom:5px;
+   padding:5px;
+  width: 250px;
+}
+.i6{
+  border-radius:10px;
+  padding:5px;
+  width: 250px;
+}
+
+.conta{
+margin-left:80px;
+  width:400px;
+}
+
+.input3{
+  width:200px;
+float: left;
 }
 
 button {
+  float: right;
+  margin-top: 100px;
     margin-bottom: 50px;
+  margin-right: 80px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -70,13 +115,13 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    min-width: 175px;
-    height: 65px;
+    padding: 0 30px;
+    width: 100px;
+    height: 35px;
     background-color: #F2955E;
-    border-radius: 25px;
+    border-radius: 20px;
     border-style: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     line-height: 1.2;
     -webkit-transition: all 0.4s;
@@ -90,9 +135,8 @@ button {
 
 }
 
-header {
-  background-color: #FFF;
-  
+header{
+    background-color: #fff;
 }
 
 header .nav-item{
@@ -137,25 +181,13 @@ a {
     text-decoration: none;
 }
 
-.negrito { 
-  color: #000; font-weight: bold; 
-
+.negrito {
+     color: #000;
+     font-weight: bold;
+     font-size: 20px;
 }
 
-.footer {
-  background-color: darkgrey;
-  bottom: 0;
-  height: 8rem;
-  color: #FFF;
-  width: 100%;
-
-}
-
-span{
-  margin-left: 44rem;
-
-}
-
-i{
-  margin-right: 2rem;
+.comunista {
+    position: relative;
+    float: left;
 }

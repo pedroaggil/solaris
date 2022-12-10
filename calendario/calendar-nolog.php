@@ -12,12 +12,16 @@
   <script src="https://kit.fontawesome.com/235f508f3b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" type="text/css" href="../css/style-home-calendario.css">
+  
+  <!-- Swiper CSS-->
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  
   <link rel="icon" type="imagem/png" href="../img/icon.png">
 </head>
 <body>
  <!-- navbar -->
   <header class="p-3 mb-3 border-bottom">
-    <div class="container">
+    <div class="containers">
 
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
@@ -38,7 +42,7 @@
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../img/user.png"/>
           </a>
-          <ul class="dropdown-menu text-small">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="../login/index.html">Entrar</a></li>
           </ul>
         </div>
@@ -57,8 +61,9 @@
    <!-- públicos -->
    <div class="pub">
   	<h4>Eventos públicos</h4>
-      <div class="container">
-      <div class="row">
+      <div class="container swiper">
+      <div class="slide-container">
+        <div class="card-wrapper swiper-wrapper">
       <?php 
 
         $search =  "SELECT * 
@@ -70,14 +75,17 @@
 
         while ($sql = $query -> fetch_object()) {
           ?>
-          <div class="card" style="width:20rem; margin-bottom:3rem;">
-              <!-- <img height="10vh" src="../img/verao.jpg" class="card-img-top"> -->
-              <div class="card-body">
-                  <p class="card-text">
+          <div class="card swiper-slide" style="width:20rem;margin-bottom:3rem;margin-right:1.5rem;align-itemns:center;justify-content:center;">
+              <div class="img-box">
+                <img src="../img/verao.jpg">
+              </div>
+              <div class="profile-details">
+                 <p style="font-weight:bold">Insere aqui o php do titulo obg<p>
+                  <div class="info">
                     <?php
                       echo '['. $sql->dt_data .' : '. $sql->hr_hora .'] '. $sql->ds_endereco .', '. $sql->nm_bairro .' - '. $sql->nm_cidade;
                     ?>
-                  </p>
+                  </div>
                   <?php 
 
                     if (isset($_SESSION['id'])) {
@@ -87,12 +95,16 @@
 
                   ?>
               </div>
-          </div>
+         </div>
           <?php
         }
       
       ?>
       </div>
+      </div>
+        <div class="swiper-button-next swiper-navBtn" style="color:#000;"></div>
+      	<div class="swiper-button-prev swiper-navBtn" style="color:#000;"></div>
+      	<div class="swiper-pagination" style="color:#000;"></div>
       </div>
       <br>
 
@@ -119,8 +131,11 @@
   </footer>
   </div> -->
   <!-- footer -->
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  
+ <!-- Swiper js-->
+ <link rel="stylesheet" href="../js/swiper-bundle.min.js">
+ <script src="../js/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 </body>
 </html>

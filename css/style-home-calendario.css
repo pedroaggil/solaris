@@ -42,6 +42,7 @@ header .nav-link:hover {
 .dropdown {
   margin-top: 1rem;
 
+
 }
 
 .dropdown-item:hover {
@@ -67,7 +68,7 @@ header .nav-link:hover {
 }
 
 .pub h5 {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
@@ -79,9 +80,8 @@ header .nav-link:hover {
 
 i {
   padding: 1rem;
-
+  
 }
-
 
 button {
   padding: 0 20px;
@@ -117,27 +117,34 @@ button {
 
  button:hover {
   background-color: darkgrey;
-
+   
 }
-
 
 span{
   margin-left: 44rem;
 
 }
-
-.calendar-card{
-  padding: 0 10px;
-  margin-left:1rem;
-  width: 250px;
-  height: 40px;
-  background-color: #F2955E;
-  border-radius: 25px;
-  border-style: none;
-  font-size: 17px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  color: #FFF
+.container{
+  max-width:1255px;
+  width:100%;
 }
+
+.slide-container{
+  margin: 0 3.5rem;
+  overflow:hidden;
+}
+.img-box{
+  height:20rem;
+}
+
+.img-box img{
+  height:100%;
+  border-radius:5px;
+  
+}
+
+.profile-details{
+  padding:2rem;
+
+}
+

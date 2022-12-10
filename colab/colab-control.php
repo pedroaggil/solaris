@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="../css/solict-p-adm.css" />
     <link rel="icon" type="imagem/png" href="../img/icon.png " />
-    <title>Controle de colaboradores</title>
+    <title>Colaboradores</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
     <main>
         <div class="box">
 
-            <h3>Controle de colaboradores</h3>
+            <h3> Colaboradores</h3>
             <div class="arrumar">
                 <div class="container">
                     <div class="row">
@@ -70,7 +70,7 @@
                             <span class="negrito" style="margin: 0  0 400px 0;">Colaboração</span>
                         </div>
                         <div class="col-2 colunalink">
-                            <a href='../colab/colab-adm.html'><img style='width: 30px; height: 30px; background-color:#F2955E; border-radius:3rem;' src='../img/mais.png' alt='Alterar registro'></a>
+                            <a href='colab-adm.php'><img style='width: 30px; height: 30px; background-color:#F2955E; border-radius:3rem;' src='../img/mais.png' alt='Alterar registro'></a>
                         </div>
                     </div>
                     <?php include '../php/connect.php';
